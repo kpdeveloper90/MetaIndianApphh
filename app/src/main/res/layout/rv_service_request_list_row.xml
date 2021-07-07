@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/card_bg"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/li_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="0dp"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/tv_comNo_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="2dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Service Req. No. :"
+                    android:textColor="@color/rv_hader"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_complainNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/tv_comNo_tag"
+                    android:gravity="start|center_vertical"
+                    android:text="N170903045"
+                    android:textColor="@color/rv_hader"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_esta_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_complainNo"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:text="xxxx"
+                    android:textColor="@color/grey_600"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_complain_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_esta_name"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginEnd="5dp"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="1"
+                    android:text="Garbage must be disposed"
+                    android:textColor="@color/grey_600"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_psName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_complain_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginEnd="5dp"
+                    android:layout_toStartOf="@+id/img_email"
+                    android:gravity="start|center_vertical"
+                    android:text="Pushkar Pradhan"
+                    android:textColor="@color/grey_600"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_email"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_below="@+id/tv_complain_title"
+
+                    android:layout_toStartOf="@+id/tv_com_Mno"
+                    android:gravity="start|center_vertical"
+                    android:src="@drawable/ic_outline_call_24px" />
+
+                <TextView
+                    android:id="@+id/tv_com_Mno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/img_email"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="start|center_vertical"
+                    android:text="9374526589"
+                    android:textColor="@color/grey_500"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_status"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tv_psName"
+                    android:layout_alignTop="@+id/tv_loc_tag"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:gravity="end|bottom"
+                    android:src="@drawable/complete" />
+
+
+                <TextView
+                    android:id="@+id/tv_loc_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tv_psName"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+
+                    android:gravity="start|center_vertical"
+                    android:text="@string/assign_to"
+                    android:textColor="@color/grey_600" />
+
+                <TextView
+                    android:id="@+id/tv_com_assign"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/tv_loc_tag"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_toStartOf="@+id/img_status"
+                    android:layout_toEndOf="@+id/tv_loc_tag"
+                    android:gravity="start|center_vertical"
+                    android:text="Alkapuri Ward"
+                    android:textColor="@color/grey_600" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/card_bottom_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv_com_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="start|center_vertical"
+                    android:text="17-Sep-18 02:45pm"
+                    android:textColor="@color/bg_hader2"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_btn_reopen"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/img_btn_feedback"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_undo_arrow_in_a_black_circle" />
+
+                <ImageView
+                    android:id="@+id/img_btn_feedback"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_chat" />
+
+                <ImageView
+                    android:id="@+id/img_btn_edit"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/img_btn_delete"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_mode_edit_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/img_btn_delete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_delete_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/img_btn_reminder"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_alarm_black_24dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

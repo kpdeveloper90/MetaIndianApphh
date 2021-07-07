@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".activity.supervisor.VehicleDeployed">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_drive_car"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_tag_vd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Detail"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Total"
+            style="@style/AppTheme.BlueUnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:text="0"
+            app:layout_constraintEnd_toStartOf="@+id/btn_Deployed"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tag_vd" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Deployed"
+            style="@style/AppTheme.GreenUnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:text="0"
+            app:layout_constraintBottom_toTopOf="@+id/tv_tag_total"
+            app:layout_constraintEnd_toStartOf="@+id/btn_maintenance"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_Total"
+            app:layout_constraintTop_toTopOf="@+id/btn_Total" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_maintenance"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            app:cornerRadius="15dp"
+            android:text="0"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:backgroundTint="@color/in_progress"
+            app:layout_constraintBottom_toTopOf="@+id/tv_tag_Deployed"
+            app:layout_constraintEnd_toStartOf="@+id/btn_NOtDeployed"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_Deployed"
+            app:layout_constraintTop_toTopOf="@+id/btn_Deployed" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_NOtDeployed"
+            style="@style/AppTheme.ReadUnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_maintenance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_maintenance"
+            app:layout_constraintTop_toTopOf="@+id/btn_maintenance" />
+
+
+        <TextView
+            android:id="@+id/tv_tag_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_Total"
+            app:layout_constraintStart_toStartOf="@+id/btn_Total"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Total" />
+
+        <TextView
+            android:id="@+id/tv_tag_Deployed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deployed"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_Deployed"
+            app:layout_constraintStart_toStartOf="@+id/btn_Deployed"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Deployed" />
+        <TextView
+            android:id="@+id/tv_tag_Maintainance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maintenance"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/btn_maintenance"
+            app:layout_constraintStart_toStartOf="@+id/btn_maintenance"
+            app:layout_constraintTop_toBottomOf="@+id/btn_maintenance" />
+        <TextView
+            android:id="@+id/tv_tag_NotDeployed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Deployed"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/btn_NOtDeployed"
+            app:layout_constraintStart_toStartOf="@+id/btn_NOtDeployed"
+            app:layout_constraintTop_toBottomOf="@+id/btn_NOtDeployed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/vh_total"
+        android:orientation="vertical">
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_VehicleDeployed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_VehicleDeployed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scrollbars="vertical"
+                tools:itemCount="15"
+                tools:listitem="@layout/rv_vehicle_deployed_row" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/progress_layout" />
+    </RelativeLayout>
+</LinearLayout>

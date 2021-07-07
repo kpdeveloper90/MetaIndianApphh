@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.metaData.CurrentLocationMark">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="78"
+            android:orientation="vertical">
+
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ll_white_round"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/ic_gps"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_mylocation" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="22"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/routelist_boutam_shape"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_place_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_placeholder" />
+
+                <TextView
+                    android:id="@+id/tv_tag_current_loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/img_place_icon"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/btn_markLoc"
+                    android:layout_toEndOf="@+id/img_place_icon"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/current_location"
+                    android:textColor="@color/white"
+
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_current_locName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_place_icon"
+                    android:layout_alignStart="@+id/img_place_icon"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_toStartOf="@+id/btn_markLoc"
+                    android:gravity="center_vertical|start"
+                    android:maxLines="3"
+                    android:text=""
+                    android:textColor="@color/grey_500"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_markLoc"
+                    android:layout_width="wrap_content"
+                    style="@style/AppTheme.ReadUnelevatedButton"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/login_tab_selecter"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/mark_location"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/btn_style2_text" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

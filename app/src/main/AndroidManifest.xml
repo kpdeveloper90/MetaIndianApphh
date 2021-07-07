@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ecosense.app">
+
+    <uses-sdk tools:overrideLibrary="com.mvivekanandji.validatingtextinputlayout" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.ecosense.app.helper.ConnactionCheckApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_dwms"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_dwms_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name="com.ecosense.app.activity.SettingActivity"></activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.ecosense.app.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ecosense.app.activity.metaData.MetaDataDashBoard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.ServiceRequestReaddressed"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.ServiceRequestDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.NewServiceRequest"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.driver.DriverExpenseList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.driver.MyAssignComplaintsList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.AssignComplaints"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.ecosense.app.Traccar.TraccarMainActivity" />
+        <activity
+            android:name="com.ecosense.app.activity.metaData.MyPOICollected"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.metaData.RouteMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.ecosense.app.activity.metaData.RouteListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.ComplaintsReaddressed"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.GenerateExpense"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.ExpenseDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.RoutePOIDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.RouteCoverage"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.POIStatus"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.VehicleDeployed"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.driver.DriverReceivedVoucher"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.GenerateVoucher"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.VoucherDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.VehicleEntryForFuel"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.FuelDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.FuelPriceUpdate"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.supervisor.SupervisorHome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.metaData.CurrentLocationMark"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.metaData.UpdateMetaData"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.metaData.MetaDataList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.driver.UpdateBinDetail"
+            android:label="Update Bin Detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.driver.RouteMapList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.driver.VehicleDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.driver.SimpleScannerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.ecosense.app.activity.driver.DriverDashBoard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.ecosense.app.activity.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.NewComplaints"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.ComplaintsDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.SelectAppLanguage"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.LoginWithMobile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.CitizenDashBoard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.AssetsStatusTracking"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.NearByPlaceTypeName"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.NearByPlaceDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.NewSuggestions"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.Helpline"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.HowTosDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.CitizenProfileDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.ToiletLocators"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.TakeTheSurvey"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ecosense.app.activity.citizen.MyProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarFullScreen"
+            android:windowSoftInputMode="adjustPan" />
+
+        <receiver android:name="com.ecosense.app.broadcastReceiver.GpsLocationReceiver">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ecosense.app.broadcastReceiver.NetworkReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.ecosense.app.broadcastReceiver.ConnectionReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.ecosense.app.Traccar.TrackingService" />
+        <service android:name="com.ecosense.app.Traccar.TrackingService$HideNotificationService" />
+        <service
+            android:name="com.ecosense.app.firebase.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <receiver android:name="com.ecosense.app.Traccar.AutostartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

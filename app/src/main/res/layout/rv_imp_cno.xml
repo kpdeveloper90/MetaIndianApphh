@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+
+        <TextView
+            android:id="@+id/tv_imp_CName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ashok Parmar"
+            android:textColor="@color/rv_hader"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_imp_desig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_imp_CName"
+            android:layout_alignStart="@+id/tv_imp_CName"
+            android:text="NA"
+            android:textColor="@color/grey_600"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/img_imp_call"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/tv_imp_desig"
+
+            android:layout_toStartOf="@+id/tv_imp_cno"
+            android:gravity="start|center_vertical"
+            android:src="@drawable/ic_outline_call_24px" />
+
+        <TextView
+            android:id="@+id/tv_imp_cno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_imp_desig"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start|center_vertical"
+            android:text="9374526589"
+            android:textColor="@color/grey_600"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_imp_desig"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="?android:attr/listDivider" />
+
+    </RelativeLayout>
+</LinearLayout>

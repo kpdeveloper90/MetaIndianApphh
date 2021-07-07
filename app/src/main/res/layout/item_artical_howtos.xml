@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_bg"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_300"/>
+    <TextView
+        android:id="@+id/text_message_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="The government has constructed 86 million toilets since 2014, reducing the number of persons who openly defecate from 550 million to fewer than 150 million in 2018 The government has constructed 86 million toilets since 2014, reducing the number of persons who openly defecate from 550 million to fewer than 150 million in 2018The government has constructed 86 million toilets since 2014, reducing the number of persons who openly defecate from 550 million to fewer than 150 million in 2018"
+        android:textColor="@color/dialog_text"
+        android:textSize="18sp" />
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#209D5C</color>
+    <color name="colorPrimaryDark">#138e4e</color>
+    <color name="drawer_textColorPrimary">#212121</color>
+    <color name="drawer_textColorSecondary">#757575</color>
+
+    <color name="colorAccent">#F8A310</color>
+    <color name="app_bg">#ECEFF1</color>
+    <color name="blub_text_new_com">#FFCD00</color>
+    <color name="fab_bg">#FF6600</color>
+    <color name="fuel_icon">#BCC5D3</color>
+
+    <color name="dialog_feedback_bg">#0084C7</color>
+    <color name="dialog_reminder_bg">#29CE84</color>
+    <color name="dialog_vehicle_bg">#F3E066</color>
+    <color name="dialog_expanse_bg">#4D79BA</color>
+    <color name="dialog_reason_bg">#F2D352</color>
+        <color name="dialog_text">#707380</color>
+    <color name="dashboard_card">#F8F7EF</color>
+
+
+    <color name="ds_list_selector_bg">#49067397</color>
+
+
+    <color name="card_bg">#e5f7ed</color>
+    <color name="card_bottom_bg">#c7e6d5</color>
+
+    <color name="tab_text">#0d7941</color>
+    <color name="tab_bg">#21b468</color>
+
+
+    <color name="event">#d6deea</color>
+    <color name="howTos">#ecddd8</color>
+
+    <color name="card4_tag">#36a182</color>
+
+
+    <color name="bgBottomNavigation">#353f4b</color>
+    <color name="in_progress">#F8A310</color>
+
+    <color name="complete">#54AB1A</color>
+    <color name="my_complain">#2699FB</color>
+    <color name="pending">#f25b43</color>
+    <color name="login_tab_bg_color">#0B7D6F</color>
+    <color name="vh_total">#D3E2EE</color>
+    <color name="vh_deployed">#D3DFD0</color>
+    <color name="vh_not_eployed">#E2CFCC</color>
+    <color name="vh_maintenance">#ECDEC6</color>
+
+
+    <color name="card1">#ffe2bb</color>
+    <!--<color name="card_tag">#93590c</color>-->
+    <color name="card_tag2">#78572e</color>
+
+
+
+    <color name="card3">#f9c9ba</color>
+    <color name="card3_tag">#7b3d2a</color>
+
+
+    <color name="popWIndow">#38585858</color>
+    <color name="white">#ffffff</color>
+    <color name="rv_empty_bg">#F7F9FA</color>
+
+
+    <color name="text_hader">#707070</color>
+    <color name="blue_900">#01579b</color>
+
+    <color name="bg_branding">#00534A</color>
+    <color name="pinfocud">#073b4c</color>
+    <color name="rv_hader">#353f4b</color>
+    <color name="bg_dark">#353A50</color>
+    <color name="bg_card_driver_voucher">#2A2E43</color>
+    <color name="bg_hader2">#515D6B</color>
+    <color name="bg_hader">#3eccc1</color>
+    <color name="icon_color">#727272</color>
+
+    <color name="grey_50">#FAFAFA</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_300">#FAFAFA</color>
+    <color name="grey_400">#BDBDBD</color>
+    <color name="grey_500">#9e9e9e</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_900">#212121</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="danger">#E64A19</color>
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popUp_WindowIdFingerScan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popWIndow"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/wait_Progress"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/dialog_reminder_bg"
+            android:src="@drawable/dialog_reminder" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="15dp">
+
+
+            <TextView
+                android:id="@+id/tv_tag_comp_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:text="Complaint Number : "
+                android:textSize="14sp"
+                android:textColor="@color/dialog_text" />
+
+            <TextView
+                android:id="@+id/tv_reminder_comp_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textSize="14sp"
+                android:layout_toEndOf="@+id/tv_tag_comp_no"
+                android:text="CO4446464"
+                android:textColor="@color/dialog_text" />
+            <ImageView
+                android:id="@+id/img_icon_reminder"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_reminder_comp_no"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/img_oprion_btn"
+                android:src="@drawable/ic_alarm_black_24dp" />
+            <TextView
+                android:id="@+id/tv_reminderCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+               android:layout_marginStart="5dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:layout_toEndOf="@+id/img_icon_reminder"
+                android:layout_alignTop="@+id/img_icon_reminder"
+               android:layout_alignBottom="@+id/img_icon_reminder"
+                android:text="44"
+                android:textSize="14sp"
+                android:textColor="@color/dialog_text" />
+            <TextView
+                android:id="@+id/tv_tag_reminder_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_reminderCount"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                android:text="Note(optional)" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_reminder_note"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edt_new_com_height"
+                android:layout_below="@+id/tv_tag_reminder_note"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_edittext"
+                android:inputType="textPersonName"
+                android:paddingStart="5dp"
+                android:paddingEnd="40dp" />
+
+
+            <TextView
+                android:id="@+id/tv_reminder_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_reminder_note"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="17sp"
+                android:background="@drawable/img_oprion_btn"
+                android:layout_toStartOf="@+id/tv_reminder_submit"
+                android:text="Cancel"
+                android:padding="5dp"
+                android:textColor="@color/dialog_text" />
+
+            <TextView
+                android:id="@+id/tv_reminder_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_reminder_note"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/img_oprion_btn"
+                android:text="Send"
+                android:textSize="17sp"
+                android:padding="5dp"
+                android:textColor="@color/dialog_reminder_bg" />
+        </RelativeLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

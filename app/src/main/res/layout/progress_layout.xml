@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rltv_progressBar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/ll_white_round"
+    android:gravity="center_horizontal"
+    android:visibility="gone">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/wait_Progress"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/load" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_toEndOf="@+id/wait_Progress"
+        android:gravity="center_vertical"
+        android:text="@string/please_wait" />
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/pending"
+        android:visibility="gone" />
+
+</RelativeLayout>

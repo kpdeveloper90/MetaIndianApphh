@@ -1,0 +1,39 @@
+ext {
+    compile_sdk_version = 29
+    build_tools_version = '29.0.0'
+    target_compatibility = '1.8'
+    source_compatibility = '1.8'
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.2'
+        classpath 'com.google.gms:google-services:4.3.5'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.5.1'
+        classpath 'com.google.firebase:perf-plugin:1.3.5'
+    }
+}
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'http://dl.bintray.com/amulyakhare/maven' }
+
+    }
+}
+
+//ext.support_version = "28.0.0"
+////ext.support_version = "27.1.1"
+//ext.constraint_layout_version = "1.1.3"
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

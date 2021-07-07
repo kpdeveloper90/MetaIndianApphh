@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg_gradiant"
+    android:orientation="vertical"
+    tools:context=".activity.supervisor.VehicleEntryForFuel">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_userProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="8dp"
+                card_view:cardUseCompatPadding="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_vh_no_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/enter_vehicle_number" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_vh_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edt_new_com_height"
+                        android:layout_below="@+id/tv_vh_no_tag"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toStartOf="@+id/tv_or_tag"
+                        android:background="@drawable/bg_edittext"
+                        android:inputType="textCapCharacters"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true" />
+
+                    <TextView
+                        android:id="@+id/tv_or_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/edt_vh_no"
+                        android:layout_alignBottom="@+id/edt_vh_no"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toStartOf="@+id/img_vh_scan_qr"
+                        android:gravity="center_vertical"
+                        android:text="or" />
+
+                    <ImageView
+                        android:id="@+id/img_vh_scan_qr"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignTop="@+id/edt_vh_no"
+                        android:layout_alignBottom="@+id/edt_vh_no"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/img_oprion_btn"
+                        android:src="@drawable/ic_qr_code" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/AppTheme.BlueUnelevatedButton"
+                        android:id="@+id/btn_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@+id/edt_vh_no"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/search"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_VehicleDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:visibility="gone"
+
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="8dp"
+                card_view:cardUseCompatPadding="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_vehicleDetailTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/vehicle_detail"
+                        android:textColor="@color/blue_900"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_vehicleDetailTag"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_vehicle_no_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="@string/vehicle_no"
+                            android:textColor="@color/rv_hader"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_vehicle_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="xxxxxxxxxxxx"
+                            android:textColor="@color/grey_600"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_ch_no_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:maxLines="1"
+                            android:text="@string/chassis_no"
+                            android:textColor="@color/rv_hader"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_ch_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="xxxxxxxxxxxx"
+                            android:textColor="@color/grey_600"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_model_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:maxLines="1"
+                            android:text="@string/model"
+                            android:textColor="@color/rv_hader"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_model"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="xxxxxxxxxxxx"
+                            android:textColor="@color/grey_600"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_ownerName_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:maxLines="1"
+                            android:text="@string/owner_agency_name"
+                            android:textColor="@color/rv_hader"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_ownerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxxxxxxxxxxx"
+                            android:textColor="@color/grey_600"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_fuelDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:visibility="gone"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="8dp"
+                card_view:cardUseCompatPadding="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_FuelDetailTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/fuel_detail"
+                        android:textColor="@color/blue_900"
+                        android:textSize="15sp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_FuelDetailTag"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_meter_reading"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_fpLocTag"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/meter_reading"
+                            card_view:layout_constraintEnd_toStartOf="@+id/tv_fuel_rate"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toStartOf="parent"
+                            card_view:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_meter_reading"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edt_new_com_height"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_edittext"
+                            android:drawableEnd="@drawable/ic_speed_meter"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="@color/grey_600"
+                            android:hint="0"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="10dp"
+                            card_view:layout_constraintEnd_toStartOf="@+id/edt_fuel_rate"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toStartOf="parent"
+                            card_view:layout_constraintTop_toBottomOf="@+id/tv_meter_reading" />
+
+                        <TextView
+                            android:id="@+id/tv_fuel_rate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/rate"
+                            card_view:layout_constraintEnd_toEndOf="parent"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toEndOf="@+id/tv_meter_reading"
+                            card_view:layout_constraintTop_toTopOf="@+id/tv_meter_reading" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_fuel_rate"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edt_new_com_height"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_edittext"
+                            android:drawableEnd="@drawable/ic_rupee_indian"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="@color/grey_600"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="0"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="10dp"
+                            card_view:layout_constraintEnd_toEndOf="parent"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toEndOf="@+id/edt_meter_reading"
+                            card_view:layout_constraintTop_toTopOf="@+id/edt_meter_reading" />
+
+
+                        <TextView
+                            android:id="@+id/tv_fuel_qty"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/quantity"
+                            card_view:layout_constraintEnd_toStartOf="@+id/tv_fuel_amount"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toStartOf="parent"
+                            card_view:layout_constraintTop_toBottomOf="@+id/edt_meter_reading" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_fuel_qty"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edt_new_com_height"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="10dp"
+                            android:imeOptions="actionDone"
+                            card_view:layout_constraintEnd_toStartOf="@+id/edt_fuel_amount"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toStartOf="parent"
+                            card_view:layout_constraintTop_toBottomOf="@+id/tv_fuel_qty" />
+
+
+                        <TextView
+                            android:id="@+id/tv_fuel_amount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/total_amount"
+                            card_view:layout_constraintEnd_toEndOf="parent"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toEndOf="@+id/tv_fuel_qty"
+                            card_view:layout_constraintTop_toTopOf="@+id/tv_fuel_qty" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_fuel_amount"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edt_new_com_height"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_edittext"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="0"
+                            android:textColor="@color/blue_900"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="10dp"
+                            card_view:layout_constraintEnd_toEndOf="parent"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toEndOf="@+id/edt_fuel_qty"
+                            card_view:layout_constraintTop_toTopOf="@+id/edt_fuel_qty" />
+
+
+                        <ImageView
+                            android:id="@+id/im_btn_cancel"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/img_oprion_btn"
+                            android:src="@drawable/ic_close"
+                            android:text="Cancel"
+                            android:textColor="@drawable/btn_style2_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/im_btn_submit"
+                            app:layout_constraintStart_toStartOf="parent"
+                            card_view:layout_constraintTop_toBottomOf="@+id/edt_fuel_qty" />
+
+                        <ImageView
+                            android:id="@+id/im_btn_submit"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/img_oprion_btn"
+                            android:src="@drawable/ic_submit"
+                            android:text="Submit"
+                            android:textColor="@drawable/btn_style2_text"
+                            app:layout_constraintBottom_toBottomOf="@+id/im_btn_cancel"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/im_btn_cancel"
+                            app:layout_constraintTop_toTopOf="@+id/im_btn_cancel" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

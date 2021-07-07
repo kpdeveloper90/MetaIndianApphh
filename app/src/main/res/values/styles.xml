@@ -1,0 +1,379 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBarFullScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+
+    <!--<style name="MyAppLolTheme" parent="MyMaterialTheme.Base">-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--<item name="android:popupBackground">#FFFFFF</item>-->
+
+    <!--<item name="android:windowContentTransitions">true</item>-->
+    <!--<item name="android:windowAllowEnterTransitionOverlap">true</item>-->
+    <!--<item name="android:windowAllowReturnTransitionOverlap">true</item>-->
+    <!--<item name="android:windowSharedElementEnterTransition">@android:transition/move</item>-->
+    <!--<item name="android:windowSharedElementExitTransition">@android:transition/move</item>-->
+    <!--</style>-->
+
+
+    <!--&lt;!&ndash;<style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">&ndash;&gt;-->
+    <!--<style name="MyMaterialTheme.Base" parent="Theme.MaterialComponents.Light.DarkActionBar">-->
+    <!--<item name="windowNoTitle">true</item>-->
+    <!--<item name="windowActionBar">false</item>-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash;<style name="DrwawerAppTheme" parent="Theme.AppCompat.Light.NoActionBar">&ndash;&gt;-->
+    <!--<style name="DrwawerAppTheme" parent="Theme.MaterialComponents.NoActionBar">-->
+
+    <!--<item name="drawerArrowStyle">@style/DrawerArrowStyle</item>-->
+    <!--</style>-->
+
+    <!--<style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">-->
+    <!--<item name="color">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <!--<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">-->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColorSecondary">#F1592A</item>
+    </style>
+
+    <style name="AppTheme.GreenUnelevatedButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="rippleColor">@color/colorPrimaryDark</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="AppTheme.BlueUnelevatedButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/my_complain</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="rippleColor">@color/dialog_feedback_bg</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="AppTheme.ReadUnelevatedButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/pending</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="rippleColor">@color/fab_bg</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Widget.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.TextInputLayout.HintText</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="HintText" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="ErrorText" parent="TextAppearance.Design.Error">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/pending</item>
+    </style>
+
+    <style name="TextAppearance.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <!--?attr/textAppearanceBody2-->
+        <!--?attr/textAppearanceSubtitle2-->
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <!--<style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">-->
+    <!--<style name="MyDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">-->
+    <!--&lt;!&ndash;calender Style&ndash;&gt;-->
+    <!--<item name="android:textColorPrimary">@color/grey_800</item>-->
+    <!--<item name="colorControlNormal">@color/grey_500</item>-->
+    <!--<item name="colorControlActivated">@color/colorAccent</item>-->
+    <!--<item name="textColorAlertDialogListItem">@android:color/white</item>-->
+    <!--<item name="colorAccent">@color/grey_800</item> &lt;!&ndash;button text color&ndash;&gt;-->
+    <!--<item name="colorControlHighlight">@color/colorAccent</item>-->
+    <!--&lt;!&ndash;<item name="android:background">@color/rv_bg</item>&ndash;&gt;-->
+    <!--&lt;!&ndash;<item name="android:windowBackground">@drawable/calendar_bg</item>&ndash;&gt;-->
+    <!--</style>-->
+
+    <!--<style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">-->
+    <style name="MyAlertDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/grey_800</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="cardHeadTitle">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="cardItemPersonName">
+        <item name="android:textColor">#313131</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="cardItemComment">
+        <item name="android:textColor">#787878</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="cardItemCommentDate">
+        <item name="android:textColor">#d6d6d6</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="positionIndicator">
+        <item name="android:textColor">#8cffffff</item>
+        <item name="android:textSize">66sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="positionIndicatorCurrent" parent="positionIndicator">
+        <!--<item name="android:textColor">#da7c80b8</item>-->
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!--added by vivekanand mishra-->
+    <style name="Card" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="CardTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="CardInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="endIconTint">@color/colorPrimary</item>
+        <item name="errorIconTint">@color/danger</item>
+        <item name="errorTextColor">@color/danger</item>
+        <item name="boxStrokeErrorColor">@color/danger</item>
+        <item name="hintTextColor">@color/colorPrimaryDark</item>
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="CardInputLayoutDropDown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="required">true</item>
+        <item name="validationCheck">always</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="endIconTint">@color/colorPrimary</item>
+        <item name="errorIconTint">@color/danger</item>
+        <item name="errorTextColor">@color/danger</item>
+        <item name="boxStrokeErrorColor">@color/danger</item>
+        <item name="hintTextColor">@color/colorPrimaryDark</item>
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="LoginInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:baselineAligned">true</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="required">true</item>
+        <item name="requiredErrorText">Required*</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="hintTextColor">@color/colorPrimaryDark</item>
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+        <item name="endIconTint">@color/colorPrimary</item>
+        <item name="startIconTint">@color/colorPrimary</item>
+        <item name="errorIconTint">@color/danger</item>
+        <item name="errorTextColor">@color/danger</item>
+        <item name="boxStrokeErrorColor">@color/danger</item>
+        <item name="layout_constraintWidth_percent">.70</item>
+    </style>
+
+    <style name="LoginEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="maxLines">1</item>
+    </style>
+
+    <style name="DialogTitle" parent="CardTitle">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DialogSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+    <style name="DialogDescription">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="DialogDescriptionUploadFailure">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="OutlineSuccessButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="strokeColor">@color/outline_success_btn_selector</item>
+        <item name="android:textColor">@color/outline_success_btn_selector</item>
+        <item name="iconTint">@color/outline_success_btn_selector</item>
+    </style>
+
+
+    <style name="DialogSuccessButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="backgroundTint">@color/success_btn_selector</item>
+    </style>
+
+    <style name="DialogDangerButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="backgroundTint">@color/danger_btn_selector</item>
+    </style>
+
+    <style name="CardEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:inputType">textCapSentences</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
+
+    <style name="CardEditTextPersonName" parent="CardEditText">
+        <item name="android:inputType">textCapWords</item>
+    </style>
+
+    <style name="CardEditTextMobile" parent="CardEditText">
+        <item name="android:inputType">phone</item>
+    </style>
+
+    <style name="CardEditTextNumber" parent="CardEditText">
+        <item name="android:inputType">number</item>
+    </style>
+
+    <style name="CardEditTextDecimal" parent="CardEditText">
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+
+    <style name="FilterChips" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="closeIconEnabled">true</item>
+        <item name="closeIconVisible">true</item>
+        <item name="closeIconTint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="chipBackgroundColor">@color/colorPrimary</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/img_vhNo"
+                    android:layout_width="@dimen/rv_row_icon"
+                    android:layout_height="@dimen/rv_row_icon"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_cargo_truck"
+                    android:tint="@color/rv_hader"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_vh_No"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="GJ555555"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_vhNo"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toEndOf="@+id/img_vhNo"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_vhNo" />
+
+
+                <ImageView
+                    android:id="@+id/img_fuel_pump_loc_pin"
+                    android:layout_width="@dimen/rv_row_icon"
+                    android:layout_height="@dimen/rv_row_icon"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_place_black_24dp"
+                    android:tint="@color/rv_hader"
+                    card_view:layout_constraintStart_toStartOf="@+id/img_vhNo"
+                    card_view:layout_constraintTop_toBottomOf="@+id/img_vhNo" />
+
+                <TextView
+                    android:id="@+id/tv_fuel_pump_loc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Indian Oil Petrol Pump , Alkapuri Road"
+                    android:textColor="@color/grey_600"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_fuel_pump_loc_pin"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toEndOf="@+id/img_fuel_pump_loc_pin"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_fuel_pump_loc_pin" />
+
+
+
+                <ImageView
+                    android:id="@+id/img_meter_reading"
+                    android:layout_width="@dimen/rv_row_icon"
+                    android:layout_height="@dimen/rv_row_icon"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_speed_meter"
+                    android:tint="@color/rv_hader"
+                    card_view:layout_constraintStart_toStartOf="@+id/img_fuel_pump_loc_pin"
+                    card_view:layout_constraintTop_toBottomOf="@+id/img_fuel_pump_loc_pin" />
+
+                <TextView
+                    android:id="@+id/tv_meter_reading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="0000000"
+                    android:textColor="@color/grey_600"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_meter_reading"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toEndOf="@+id/img_meter_reading"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_meter_reading" />
+
+
+                <ImageView
+                    android:id="@+id/img_fuel_meter"
+                    android:layout_width="@dimen/rv_row_icon"
+                    android:layout_height="@dimen/rv_row_icon"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_fuel_qty"
+                    android:tint="@color/rv_hader"
+                    card_view:layout_constraintEnd_toStartOf="@+id/tv_fuel_qty"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/img_meter_reading"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_fuel_qty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="23.2"
+                    android:textColor="@color/grey_600"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_fuel_meter"
+                    card_view:layout_constraintEnd_toStartOf="@+id/img_fuel_price"
+                    card_view:layout_constraintHorizontal_bias="0.5"
+                    card_view:layout_constraintStart_toEndOf="@+id/img_fuel_meter"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_fuel_meter" />
+
+                <TextView
+                    android:id="@+id/img_fuel_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                  android:text="@string/rate"
+                    android:textColor="@color/rv_hader"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_fuel_meter"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintEnd_toStartOf="@+id/tv_fuel_price"
+                    card_view:layout_constraintHorizontal_bias="0.5"
+                    card_view:layout_constraintStart_toEndOf="@+id/tv_fuel_qty"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_fuel_meter" />
+
+                <TextView
+                    android:id="@+id/tv_fuel_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="23.2"
+                    android:textColor="@color/grey_600"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="8dp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_fuel_price"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintHorizontal_bias="0.5"
+                    card_view:layout_constraintStart_toEndOf="@+id/img_fuel_price"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_fuel_price"
+                    card_view:layout_constraintVertical_bias="0.0" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/ll_gray_round_bg"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="2dp"
+                    card_view:layout_constraintEnd_toStartOf="@+id/img_fuel_fill_date"
+                    card_view:layout_constraintHorizontal_bias="0.0"
+                    card_view:layout_constraintStart_toStartOf="@+id/img_fuel_meter"
+                    card_view:layout_constraintTop_toBottomOf="@+id/img_fuel_meter">
+
+                    <ImageView
+                        android:id="@+id/img_tot_fuel_amt"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_tot_amount"
+                        android:tint="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/tv_tot_fuel_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:text="23.2"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_fuel_fill_date"
+                    android:layout_width="@dimen/rv_row_icon"
+                    android:layout_height="@dimen/rv_row_icon"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_today_black_24dp"
+                    android:tint="@color/rv_hader"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+                    card_view:layout_constraintEnd_toStartOf="@+id/tv_fuel_fill_date"
+                    card_view:layout_constraintTop_toTopOf="@+id/linearLayout4" />
+
+                <TextView
+                    android:id="@+id/tv_fuel_fill_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="12-02-2019 11:44pm"
+                    android:textColor="@color/grey_600"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_fuel_fill_date"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_fuel_fill_date" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

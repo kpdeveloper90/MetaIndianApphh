@@ -1,0 +1,127 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">150dp</dimen>
+    <dimen name="left_guideline">16dp</dimen>
+    <dimen name="right_guideline">16dp</dimen>
+    <dimen name="top_guideline">10dp</dimen>
+    <dimen name="bottom_guideline">10dp</dimen>
+    <dimen name="btn_height">45dp</dimen>
+    <dimen name="edt_height">45dp</dimen>
+    <dimen name="edt_new_com_height">40dp</dimen>
+
+
+    <dimen name="edt_text_big_size">24sp</dimen>
+    <dimen name="edt_text_title_size">18sp</dimen>
+    <dimen name="edt_text_normal_size">14sp</dimen>
+
+    <dimen name="speech_bubble_corners">10dp</dimen>
+    <dimen name="speech_bubble_corners_plus_tail">15dp</dimen>
+    <dimen name="speech_bubble_spacing">5dp</dimen>
+    <dimen name="speech_bubble_tail">25dp</dimen>
+
+
+    <dimen name="three">3dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="nine">9dp</dimen>
+    <dimen name="one_zero">10dp</dimen>
+    <dimen name="one_one">11dp</dimen>
+    <dimen name="one_two">12dp</dimen>
+    <dimen name="one_three">13dp</dimen>
+    <dimen name="one_four">14dp</dimen>
+    <dimen name="one_five">15dp</dimen>
+    <dimen name="one_six">16dp</dimen>
+    <dimen name="one_eight">18dp</dimen>
+    <dimen name="two_zero">20dp</dimen>
+    <dimen name="two_one">21dp</dimen>
+    <dimen name="two_two">22dp</dimen>
+    <dimen name="two_four">24dp</dimen>
+    <dimen name="two_five">25dp</dimen>
+    <dimen name="two_seven">27dp</dimen>
+    <dimen name="two_eight">28dp</dimen>
+    <dimen name="three_zero">30dp</dimen>
+    <dimen name="three_two">32dp</dimen>
+    <dimen name="three_six">36dp</dimen>
+    <dimen name="four_zero">40dp</dimen>
+    <dimen name="four_two">42dp</dimen>
+    <dimen name="four_eight">48dp</dimen>
+    <dimen name="five_zero">50dp</dimen>
+    <dimen name="five_two">52dp</dimen>
+    <dimen name="five_four">54dp</dimen>
+    <dimen name="five_five">55dp</dimen>
+    <dimen name="six_zero">60dp</dimen>
+    <dimen name="six_six">66dp</dimen>
+    <dimen name="six_seven">67dp</dimen>
+    <dimen name="six_nine">69dp</dimen>
+    <dimen name="seven_zero">70dp</dimen>
+    <dimen name="seven_one">71dp</dimen>
+    <dimen name="seven_five">75dp</dimen>
+    <dimen name="eight_zero">80dp</dimen>
+    <dimen name="eight_five">85dp</dimen>
+    <dimen name="nine_two">92dp</dimen>
+    <dimen name="nine_nine">99dp</dimen>
+    <dimen name="one_zero_zero">100dp</dimen>
+    <dimen name="one_zero_two">102dp</dimen>
+    <dimen name="one_zero_four">104dp</dimen>
+    <dimen name="one_zero_nine">109dp</dimen>
+    <dimen name="one_one_zero">110dp</dimen>
+    <dimen name="one_two_zero">120dp</dimen>
+    <dimen name="one_two_seven">127dp</dimen>
+    <dimen name="one_two_eight">128dp</dimen>
+    <dimen name="one_two_nine">129dp</dimen>
+    <dimen name="one_three_zero">130dp</dimen>
+    <dimen name="one_three_four">134dp</dimen>
+    <dimen name="one_four_zero">140dp</dimen>
+    <dimen name="one_four_two">142dp</dimen>
+    <dimen name="one_four_five">145dp</dimen>
+    <dimen name="one_five_zero">150dp</dimen>
+    <dimen name="one_five_two">152dp</dimen>
+    <dimen name="one_five_five">155dp</dimen>
+    <dimen name="one_five_seven">157dp</dimen>
+    <dimen name="one_six_zero">160dp</dimen>
+    <dimen name="one_six_three">163dp</dimen>
+    <dimen name="one_seven_zero">170dp</dimen>
+    <dimen name="one_seven_two">172dp</dimen>
+    <dimen name="one_seven_five">175dp</dimen>
+    <dimen name="one_seven_six">176dp</dimen>
+    <dimen name="one_seven_seven">177dp</dimen>
+    <dimen name="one_seven_eight">178dp</dimen>
+    <dimen name="one_eight_zero">180dp</dimen>
+    <dimen name="one_eight_five">185dp</dimen>
+    <dimen name="one_nine_zero">190dp</dimen>
+    <dimen name="two_zero_five">205dp</dimen>
+    <dimen name="two_zero_six">206dp</dimen>
+    <dimen name="two_two_one">221dp</dimen>
+    <dimen name="two_two_eight">228dp</dimen>
+    <dimen name="two_three_zero">230dp</dimen>
+    <dimen name="two_three_five">235dp</dimen>
+    <dimen name="two_six_seven">267dp</dimen>
+    <dimen name="two_seven_three">273dp</dimen>
+    <dimen name="two_seven_five">275dp</dimen>
+    <dimen name="two_eight_five">285dp</dimen>
+    <dimen name="two_nine_zero">290dp</dimen>
+    <dimen name="three_two_zero">320dp</dimen>
+    <dimen name="three_six_four">364dp</dimen>
+    <dimen name="three_seven_zero">370dp</dimen>
+    <dimen name="three_eight_four">384dp</dimen>
+    <dimen name="four_three_zero">430dp</dimen>
+    <dimen name="four_five_zero">450dp</dimen>
+
+
+    <!--extra-->
+
+    <dimen name="seven">7dp</dimen>
+    <dimen name="eight_four">84dp</dimen>
+    <dimen name="one_eight_two">182dp</dimen>
+    <dimen name="one_nine_six">196dp</dimen>
+
+    <dimen name="nine_five">95dp</dimen>
+    <dimen name="two_five_zero">250dp</dimen>
+    <dimen name="rv_row_icon">15dp</dimen>
+
+</resources>

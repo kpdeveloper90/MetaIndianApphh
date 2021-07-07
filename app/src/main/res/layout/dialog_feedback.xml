@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popUp_WindowIdFingerScan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popWIndow"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/wait_Progress"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@color/dialog_feedback_bg"
+                android:src="@drawable/dialog_feedback" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="15dp">
+
+
+                <TextView
+                    android:id="@+id/tv_tag_comp_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:text="Complaint Number : "
+                    android:textColor="@color/dialog_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_feedback_comp_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/tv_tag_comp_no"
+                    android:text="CO4446464"
+                    android:textColor="@color/dialog_text"
+                    android:textSize="14sp" />
+
+
+                <com.hsalf.smilerating.SmileRating
+                    android:id="@+id/feedback_ratingView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_feedback_comp_no"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="8dp"
+                    app:angryColor="#f29a68"
+                    app:drawingColor="#353431"
+                    app:isIndicator="false"
+                    app:normalColor="#f2dd68"
+                    app:placeHolderBackgroundColor="@color/grey_500"
+                    app:placeHolderSmileColor="#ffffff"
+                    app:textNonSelectionColor="#AEB3B5"
+                    app:textSelectionColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/tv_feedback_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/feedback_ratingView"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toStartOf="@+id/tv_feedback_submit"
+                    android:text="@string/btn_cancel"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:background="@drawable/img_oprion_btn"
+                    android:textSize="17sp"
+                    android:textColor="@color/dialog_text" />
+
+                <TextView
+                    android:id="@+id/tv_feedback_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/feedback_ratingView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:padding="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/btn_submit"
+                    android:clickable="true"
+                    android:background="@drawable/img_oprion_btn"
+                    android:textSize="17sp"
+                    android:textColor="@color/dialog_feedback_bg" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

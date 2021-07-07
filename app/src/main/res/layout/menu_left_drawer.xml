@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_bg"
+    android:orientation="vertical">
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/img_drawer_profile"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user_1"
+        app:civ_border_color="@color/grey_400"
+        app:civ_border_width="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/img_btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/img_oprion_btn"
+        android:src="@drawable/ic_mode_edit_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_drawer_profile"
+        app:layout_constraintStart_toEndOf="@+id/img_drawer_profile"
+        app:layout_constraintTop_toTopOf="@+id/img_drawer_profile"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <TextView
+        android:id="@+id/tv_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingRight="24dp"
+        android:text="Guest"
+        android:textColor="@color/blue_900"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/img_drawer_profile"
+        app:layout_constraintTop_toBottomOf="@+id/img_drawer_profile" />
+
+
+    <TextView
+        android:id="@+id/tv_uMno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="24dp"
+        android:text="(M) 9374720195"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_userName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_userName" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_uMno"
+        app:layout_constraintVertical_bias="0.0"
+        tools:itemCount="15"
+        tools:listitem="@layout/recycler_view_item" />
+
+
+    <LinearLayout
+        android:id="@+id/btn_Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/login_tab_selecter"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/list"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_exit"
+            android:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

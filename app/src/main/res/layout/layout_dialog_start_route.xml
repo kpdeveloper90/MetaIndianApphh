@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cdRoot"
+    style="@style/Card">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupStartInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="ilZoneName, ilWardNumber, ilVehicleNumber, ilRouteName, btNo, btStart" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            style="@style/DialogTitle"
+            android:text="@string/dialog_start_plotting_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout
+            android:id="@+id/ilZoneName"
+            style="@style/CardInputLayoutDropDown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etZoneName"
+                style="@style/CardEditText"
+                android:focusable="false"
+                android:hint="@string/et_hint_zone_number" />
+        </com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout>
+
+        <com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout
+            android:id="@+id/ilWardNumber"
+            style="@style/CardInputLayoutDropDown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ilZoneName">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etWardNumber"
+                style="@style/CardEditText"
+                android:focusable="false"
+                android:hint="@string/et_hint_ward_number" />
+        </com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout>
+
+        <com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout
+            android:id="@+id/ilVehicleNumber"
+            style="@style/CardInputLayoutDropDown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ilWardNumber">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etVehicleNumber"
+                style="@style/CardEditText"
+                android:focusable="false"
+                android:hint="@string/et_hint_vehicle_number" />
+        </com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ilRouteName"
+            style="@style/CardInputLayout"
+            app:required="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ilVehicleNumber">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRouteName"
+                style="@style/CardEditText"
+                android:imeOptions="actionDone"
+                android:hint="@string/et_hint_route_name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btStart"
+            style="@style/DialogSuccessButton"
+            android:layout_marginBottom="8dp"
+            android:enabled="false"
+            android:text="@string/start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btNo"
+            app:layout_constraintTop_toBottomOf="@+id/ilRouteName" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btNo"
+            style="@style/DialogDangerButton"
+            android:layout_marginBottom="8dp"
+            android:text="@string/btn_no"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btStart"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ilRouteName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/tv_count_5"
+            android:textColor="@color/colorPrimary"
+            android:textSize="48sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

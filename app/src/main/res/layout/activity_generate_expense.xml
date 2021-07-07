@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg_card"
+    tools:context=".activity.supervisor.GenerateExpense">
+
+    <include
+        android:id="@+id/include8"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_hader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:src="@drawable/voucher_generate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1.7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include8"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/card_white_gray_gradient"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_hader">
+
+
+        <ImageView
+            android:id="@+id/img_name"
+            android:layout_width="@dimen/rv_row_icon"
+            android:layout_height="@dimen/rv_row_icon"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_outline_person_24px"
+            android:tint="@color/grey_600"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_emp_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="xxxxx"
+            android:textColor="@color/grey_600"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_name"
+            app:layout_constraintTop_toTopOf="@+id/img_name" />
+
+
+        <TextView
+            android:id="@+id/tv_reason_for_voucher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/type_of_expense"
+            app:layout_constraintEnd_toEndOf="@+id/tv_emp_name"
+            app:layout_constraintStart_toStartOf="@+id/img_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emp_name" />
+
+        <LinearLayout
+            android:id="@+id/ll_com_type"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edt_new_com_height"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edittext"
+            app:layout_constraintEnd_toEndOf="@+id/tv_reason_for_voucher"
+            app:layout_constraintStart_toStartOf="@+id/tv_reason_for_voucher"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reason_for_voucher">
+
+            <Spinner
+                android:id="@+id/sp_type_of_expense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_description_tag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/description"
+
+            app:layout_constraintEnd_toEndOf="@+id/ll_com_type"
+            app:layout_constraintStart_toStartOf="@+id/ll_com_type"
+            app:layout_constraintTop_toBottomOf="@+id/ll_com_type" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_description"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edt_new_com_height"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edittext"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/tv_description_tag"
+            app:layout_constraintStart_toStartOf="@+id/tv_description_tag"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description_tag" />
+
+        <TextView
+            android:id="@+id/tv_expense_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/expense_amount"
+            app:layout_constraintEnd_toStartOf="@+id/tv_expense_date"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/edt_description"
+            app:layout_constraintTop_toBottomOf="@+id/edt_description" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_expense_amount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edt_new_com_height"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edittext"
+            android:drawableEnd="@drawable/ic_rupee_indian"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/grey_600"
+            android:hint="0.0"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_expense_amount"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_expense_amount"
+            app:layout_constraintTop_toBottomOf="@+id/tv_expense_amount" />
+
+        <TextView
+            android:id="@+id/tv_expense_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:text="@string/expense_date"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_expense_amount"
+            app:layout_constraintEnd_toEndOf="@+id/edt_description"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_expense_amount"
+            app:layout_constraintTop_toTopOf="@+id/tv_expense_amount" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_expense_date"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edt_new_com_height"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edittext"
+            android:drawableEnd="@drawable/ic_today_black_24dp"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/grey_600"
+            android:hint="yyyy-mm-dd"
+            android:imeOptions="actionDone"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_expense_date"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_expense_date"
+            app:layout_constraintTop_toBottomOf="@+id/tv_expense_date" />
+
+        <ImageView
+            android:id="@+id/im_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/img_oprion_btn"
+            android:src="@drawable/ic_close"
+            android:text="Cancel"
+            android:textColor="@drawable/btn_style2_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/im_btn_submit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_expense_amount"
+            app:layout_constraintVertical_bias="0.52" />
+
+        <ImageView
+            android:id="@+id/im_btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/img_oprion_btn"
+            android:src="@drawable/ic_submit"
+            android:text="Submit"
+            android:textColor="@drawable/btn_style2_text"
+            app:layout_constraintBottom_toBottomOf="@+id/im_btn_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/im_btn_cancel"
+            app:layout_constraintTop_toTopOf="@+id/im_btn_cancel" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <string-array name="reason">
+        <item>Bin not available</item>
+        <item>Vehicle Breakdown</item>
+    </string-array>
+
+    <string-array name="typeOfExpanses">
+        <item>Vehicle Breakdown</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="Complaint_type">
+        <item>Garbage collection</item>
+        <item>Bin not available</item>
+        <item>Bin replacement</item>
+        <item>Request for new Bin</item>
+        <item>Toilet Clean</item>
+        <item>Staff Complaints</item>
+    </string-array>
+
+    <string-array name="poi_type">
+        <item>Open Spot</item>
+        <item>Door To Door</item>
+        <item>BIN</item>
+    </string-array>
+    <string-array name="type_of_bin">
+        <item>Wet Waste </item>
+        <item>Dry Waste</item>
+    </string-array>
+
+    <string-array name="type_of_Establishments">
+        <item>Residential Society</item>
+        <item>Commercial Building</item>
+        <item>Hotel</item>
+        <item>Marriage Hall / Party Plot</item>
+        <item>Shopping Mall</item>
+        <item>Public Toilet</item>
+        <item>Vegetable / Fruit Market</item>
+        <item>Meat / Fish Market</item>
+        <item>Railway Station</item>
+        <item>Bus Station/ Depot</item>
+        <item>Airport</item>
+        <item>Religious Place</item>
+    </string-array>
+    <string-array name="location_type">
+        <item>Society</item>
+        <item>Apartment</item>
+        <item>Bungalow</item>
+        <item>Hotel</item>
+        <item>Banquet</item>
+        <item>Restaurant</item>
+        <item>Vegetable/Fruit Market</item>
+        <item> Meat/Fish Market</item>
+    </string-array>
+
+    <string-array name="wardNumber">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array><string-array name="RouteNumber">
+        <item>05</item>
+        <item>06</item>
+        <item>11</item>
+        <item>13</item>
+    </string-array>
+
+    <array name="ld_Drawer_individual_activityScreenIcons">
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_survey</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_complain</item>
+        <item>@drawable/ic_recommendation</item>
+        <item>@drawable/ic_notifications_none_black_24dp</item>
+        <item>@drawable/ic_settings</item>
+    </array><array name="ld_Drawer_corporate_activityScreenIcons">
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_survey</item>
+        <item>@drawable/ic_placeholder</item>
+        <item>@drawable/ic_setvice_request</item>
+        <item>@drawable/ic_recommendation</item>
+        <item>@drawable/ic_notifications_none_black_24dp</item>
+        <item>@drawable/ic_settings</item>
+    </array>
+
+
+
+    <array name="supervisor_activityScreenIcons">
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_cargo_truck</item>
+        <item>@drawable/ic_route</item>
+        <item>@drawable/ic_delete_black_24dp</item>
+        <item>@drawable/ic_complain</item>
+        <item>@drawable/ic_setvice_request</item>
+        <item>@drawable/ic_gasoline_pump</item>
+        <item>@drawable/ic_expance</item>
+        <item>@drawable/ic_voucher</item>
+    </array>
+    <string-array name="department">
+        <item>Bridge Cell</item>
+        <item>Drainage Projects</item>
+        <item>Town Development Dept. (B.P.)</item>
+        <item>Street Light</item>
+        <item>JnNURM (BSUP)</item>
+        <item>Electrical Sewrage</item>
+        <item>Mechanical Sewrage</item>
+        <item>Building Project</item>
+        <item>Road</item>
+        <item>Storm Water Drainage</item>
+        <item>Water Works</item>
+        <item>Land &amp; Estate (T.P.)</item>
+        <item>Solid Waste Mgmt.</item>
+        <item>Health Dept.</item>
+        <item>I.C.D.S. Dept.</item>
+        <item>Birth, Death 	&amp; Marriage Registration</item>
+        <item>IT</item>
+        <item>Accounts</item>
+        <item>Audit</item>
+        <item>Census</item>
+        <item>P.R.O.</item>
+        <item>Election</item>
+        <item>Land &amp; Estate (Acquisition)</item>
+        <item>Shops	&amp; Establishment</item>
+        <item>Assesment Dept.</item>
+        <item>U.C.D.-N.U.L.M.</item>
+    </string-array>
+
+    <array name="mdcolor_400">
+        <item name="red_400" type="color">#e84e40</item>
+        <item name="pink_400" type="color">#ec407a</item>
+        <item name="purple_400" type="color">#ab47bc</item>
+        <item name="deep_purple_400" type="color">#7e57c2</item>
+        <!--<item name="indigo_400" type="color">#5c6bc0</item>-->
+        <item name="blue_400" type="color">#738ffe</item>
+        <item name="light_blue_400" type="color">#29b6f6</item>
+        <item name="cyan_400" type="color">#26c6da</item>
+        <item name="teal_400" type="color">#26a69a</item>
+        <!--<item name="green_400" type="color">#2baf2b</item>-->
+        <!--<item name="light_green_400" type="color">#9ccc65</item>-->
+        <item name="lime_400" type="color">#d4e157</item>
+        <item name="yellow_400" type="color">#ffee58</item>
+        <item name="orange_400" type="color">#ffa726</item>
+        <item name="deep_orange_400" type="color">#ff7043</item>
+        <item name="brown_400" type="color">#8d6e63</item>
+        <item name="grey_400" type="color">#bdbdbd</item>
+        <item name="blue_grey_400" type="color">#78909c</item>
+    </array>
+
+</resources>

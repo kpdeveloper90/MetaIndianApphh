@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/conl_login"
+    android:orientation="vertical"
+    android:background="@color/app_bg"
+    tools:context=".activity.citizen.CitizenProfileDetail">
+
+    <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_p_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:text="Privacy Policy"
+                android:textColor="@color/blue_900"
+                android:textSize="22sp"
+               />
+
+            <TextView
+                android:id="@+id/tv_p_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text=""
+                android:textColor="@color/dialog_text"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+</LinearLayout>

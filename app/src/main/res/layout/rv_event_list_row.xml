@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/grey_50"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="8dp"
+        card_view:cardUseCompatPadding="true"
+  >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/img_event"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_image" />
+
+            <View
+                android:id="@+id/vg"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/news_head_gradient"/>
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:maxLines="3"
+                android:padding="5dp"
+                android:text="Mahindra Alturas SUV features list revealed - To compete with 30L SUVs"
+                android:textAppearance="@style/cardItemPersonName"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_DateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ll_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="15/02/2018 20:25"
+                android:textAppearance="@style/cardItemCommentDate"
+                android:textColor="@color/grey_300" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_event"
+                android:background="@color/card_bottom_bg"
+                android:gravity="center_vertical|end"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/img_btn_SocialThumbUp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_thumb_up" />
+
+                <TextView
+                    android:id="@+id/tv_count_socialThumbUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="1555"
+                    android:textColor="@color/bg_hader2"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_btn_socialThumbDown"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_thumb_down" />
+
+                <TextView
+                    android:id="@+id/tv_count_socialThumbDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:paddingEnd="5dp"
+                    android:text="15"
+                    android:textColor="@color/bg_hader2"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_btn_volunteer"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_pan_tool_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/img_btn_directions"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_directions_black_24dp" />
+
+
+                <ImageView
+                    android:id="@+id/img_btn_share"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_share_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/img_btn_favorite"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_favorite_border_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/img_btn_addEventInCalendar"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:background="@drawable/img_oprion_btn"
+                    android:src="@drawable/ic_event_available_black_24dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

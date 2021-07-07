@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:orderInCategory="100"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_filter_search"
+        android:title="@string/search"
+        android:visible="false"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:icon="@drawable/ic_search_black_24dp"
+        app:showAsAction="collapseActionView|always" />
+
+    <item
+        android:id="@+id/action_filter"
+        android:title="@string/filter"
+        android:visible="false"
+        android:icon="@drawable/ic_filter"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_request_voucher"
+        android:title="@string/voucher_request"
+        android:visible="false"
+        android:icon="@drawable/ic_add_circle_outline_black_24dp"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_request_call_driver"
+        android:title="@string/call_driver"
+        android:visible="false"
+        android:icon="@drawable/ic_speech_bubble"
+        app:showAsAction="ifRoom" />
+</menu>

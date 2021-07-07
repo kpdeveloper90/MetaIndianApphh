@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "719115832615",
+    "project_id": "ecosense-3be12",
+    "storage_bucket": "ecosense-3be12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719115832615:android:4935e0d0ef2dbee45d6d02",
+        "android_client_info": {
+          "package_name": "com.ecosense.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719115832615-2bdhoel370d6im4vkunv75bi66olgdej.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ecosense.app",
+            "certificate_hash": "07e3322da91bfd84a749bbd0f2c932a05779fccf"
+          }
+        },
+        {
+          "client_id": "719115832615-1puq8hre8cuab7ib87bapcevaegi53ru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC57xEtDsVgLqTrlz19tGB75pRoBPuTON8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719115832615-1puq8hre8cuab7ib87bapcevaegi53ru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

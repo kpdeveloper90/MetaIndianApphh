@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.driver.RouteMapList">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="83"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ll_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/srl_RouteMapDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_RouteMapDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:paddingTop="5dp"
+                        android:scrollbars="vertical"
+                        tools:itemCount="10"
+                        tools:listitem="@layout/rv_routemap" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                <include layout="@layout/progress_layout"/>
+            </RelativeLayout>
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="17"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/routelist_boutam_shape"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_bin_pending_count"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/read_round_shape"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="22dp" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/AppTheme.BlueUnelevatedButton"
+                    android:id="@+id/btn_completed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+
+                    android:paddingStart="30dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="10dp"
+                    android:textAllCaps="false"
+                    android:text="@string/complete_route"
+                    android:textColor="@drawable/btn_style2_text" />
+
+                <TextView
+                    android:id="@+id/tv_bin_clean_count"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/green_round_shape"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="22dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".activity.citizen.TakeTheSurvey">
+
+    <include
+
+        android:id="@+id/include4"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_bg"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:paddingStart="16dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/img_survey"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_image"
+            app:civ_border_color="@color/grey_400"
+            app:civ_border_width="1dp" />
+
+
+        <TextView
+            android:id="@+id/tv_sur_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_QADetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingTop="5dp"
+        android:scrollbars="vertical"
+        tools:itemCount="10"
+        tools:listitem="@layout/rv_qua_ans_list_row" />
+
+</LinearLayout>

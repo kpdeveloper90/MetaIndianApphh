@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp">
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <View
+                android:id="@+id/view_status"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/pending" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                android:paddingStart="5dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/img_vh_route"
+                    android:layout_width="@dimen/rv_row_icon"
+                    android:layout_height="@dimen/rv_row_icon"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_place_black_24dp"
+                    android:tint="@color/rv_hader"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_vh_route_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="Akapuri"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_vh_route"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toEndOf="@+id/img_vh_route"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_vh_route" />
+
+                <ImageView
+                    android:id="@+id/img_route_vhNo"
+                    android:layout_width="@dimen/rv_row_icon"
+                    android:layout_height="@dimen/rv_row_icon"
+
+                    android:layout_marginTop="8dp"
+
+                    android:src="@drawable/ic_cargo_truck"
+                    android:tint="@color/rv_hader"
+                    card_view:layout_constraintEnd_toStartOf="@+id/tv_route_vh_No"
+                    card_view:layout_constraintHorizontal_bias="0.5"
+                    card_view:layout_constraintStart_toStartOf="@+id/img_vh_route"
+                    card_view:layout_constraintTop_toBottomOf="@+id/img_vh_route" />
+
+                <TextView
+                    android:id="@+id/tv_route_vh_No"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="GJ555555"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_route_vhNo"
+
+                    card_view:layout_constraintEnd_toStartOf="@+id/tv_tag_type"
+                    card_view:layout_constraintHorizontal_bias="0.5"
+                    card_view:layout_constraintStart_toEndOf="@+id/img_route_vhNo"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_route_vhNo" />
+
+
+                <ImageView
+                    android:id="@+id/img_route_dr_name"
+                    android:layout_width="@dimen/rv_row_icon"
+                    android:layout_height="@dimen/rv_row_icon"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_person_black_24dp"
+                    android:tint="@color/rv_hader"
+                    card_view:layout_constraintStart_toStartOf="@+id/img_route_vhNo"
+                    card_view:layout_constraintTop_toBottomOf="@+id/img_route_vhNo" />
+
+                <TextView
+                    android:id="@+id/tv_route_dr_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="ABC"
+                    android:textColor="@color/grey_600"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/img_route_dr_name"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toEndOf="@+id/img_route_dr_name"
+                    card_view:layout_constraintTop_toTopOf="@+id/img_route_dr_name" />
+
+                <TextView
+                    android:id="@+id/tv_tag_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/type"
+                    android:textColor="@color/rv_hader"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/tv_route_vh_No"
+                    card_view:layout_constraintEnd_toStartOf="@+id/tv_route_vh_type"
+                    card_view:layout_constraintHorizontal_bias="0.5"
+                    card_view:layout_constraintStart_toEndOf="@+id/tv_route_vh_No"
+                    card_view:layout_constraintTop_toTopOf="@+id/tv_route_vh_No" />
+
+                <TextView
+                    android:id="@+id/tv_route_vh_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="Mini Ven"
+                    android:textColor="@color/grey_600"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/tv_tag_type"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintHorizontal_bias="0.5"
+                    card_view:layout_constraintStart_toEndOf="@+id/tv_tag_type"
+                    card_view:layout_constraintTop_toTopOf="@+id/tv_tag_type" />
+
+
+                <TextView
+                    android:id="@+id/tv_vh_start_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:text="Start Date : 00-00-0000 00:00"
+                    android:textColor="@color/grey_600"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintHorizontal_bias="0.5"
+                    card_view:layout_constraintStart_toEndOf="@+id/tv_route_Status"
+                    card_view:layout_constraintTop_toBottomOf="@+id/tv_route_dr_name" />
+
+
+                <TextView
+                    android:id="@+id/tv_route_Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="Unused"
+                    android:textColor="@color/pending"
+                    android:textSize="14sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/tv_route_end_Date"
+                    card_view:layout_constraintEnd_toStartOf="@+id/tv_vh_start_date"
+                    card_view:layout_constraintHorizontal_bias="0.5"
+                    card_view:layout_constraintStart_toStartOf="@+id/img_route_dr_name"
+                    card_view:layout_constraintTop_toTopOf="@+id/tv_vh_start_date" />
+
+
+                <TextView
+                    android:id="@+id/tv_route_end_Date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="8dp"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:text="End Date : 00-00-0000 00:00"
+                    android:textColor="@color/grey_600"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="@+id/tv_vh_start_date"
+                    card_view:layout_constraintTop_toBottomOf="@+id/tv_vh_start_date" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

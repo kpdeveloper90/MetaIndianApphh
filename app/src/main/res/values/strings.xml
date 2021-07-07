@@ -1,0 +1,614 @@
+<resources>
+    <string name="app_name" translatable="false">DWMS</string>
+    <!--<string name="branding_name">© EcoSense Solutions Pvt Ltd </string>-->
+    <string name="branding_name" translatable="false">© Ecosense Enviro Solutions Pvt Ltd</string>
+
+    <string name="appTitle" translatable="false">EcoSense DWMS®</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="password" translatable="false">Password</string>
+
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+
+    <string-array name="app_language" translatable="false">
+        <item>English</item>
+        <item>हिंदी</item>
+        <item>ગુજરાતી</item>
+        <item>मराठी</item>
+    </string-array>
+
+    <string-array name="place_type" translatable="false">
+        <item>Bank</item>
+        <item>Blood Bank</item>
+        <item>Bus Station</item>
+        <item>Community Center</item>
+        <item>Colleges</item>
+        <item>Embassy</item>
+        <item>Gym</item>
+        <item>Hospital</item>
+        <item>Library</item>
+        <item>LPG Gas Pumps</item>
+        <item>Market</item>
+        <item>Monuments</item>
+        <item>Parking Place</item>
+        <item>Petrol Pumps</item>
+        <item>Police Station</item>
+        <item>Post Office</item>
+        <item>Public Toilet</item>
+        <item>Stadium</item>
+        <item>School</item>
+        <item>Taxi Stand</item>
+        <item>Tourist Place</item>
+    </string-array>
+
+
+    <!--    <string name="title_activity_complaints_home">ComplaintsHome</string>-->
+
+    <!--    <string name="section_format">Hello World from section: %1$d</string>-->
+    <!--    <string name="vehicle_tracking_and_monitoring">Vehicle Tracking and Monitoring</string>-->
+    <!--    <string name="collection_analysis">Collection Analysis</string>-->
+    <!--    <string name="attendance_payroll_and_compliance">Attendance, Payroll and Compliance</string>-->
+    <!--    <string name="customer_complaints_and_feedback">Customer Complaints and Feedback</string>-->
+    <!--    <string name="photo_or_text_capture">Photo or Text capture</string>-->
+    <!--    <string name="servicing_and_maintenance">Servicing and Maintenance</string>-->
+    <!--    <string name="collection_tracking">Collection Tracking</string>-->
+    <!--    <string name="bin_mapping">Bin mapping</string>-->
+    <!--    <string name="survey_management">RoutePoint Management</string>-->
+
+
+    <!--    <string name="com_desc">Garbage must be disposed of once a week and must be placed in proper waste containers, i.e. garbage cans or dumpsters. Garbage must not be allowed to remain exposed on the premises longer than reasonably necessary to deposit it in proper waste containers. Garbage must not be kept in a manner which creates an odor or attracts vermin. </string>-->
+    <string name="individual" translatable="false">Individual</string>
+    <string name="corporate" translatable="false">Corporate</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
+
+    // Traccar String
+    <string name="status_service_create">Service started</string>
+    <string name="status_service_destroy">Service stopped</string>
+    <string name="status_send_success">Send successfully</string>
+    <string name="status_send_fail">Send failed</string>
+    <string name="status_location_update">Location update</string>
+    <string name="status_network_online">Network online</string>
+    <string name="status_network_offline">Network offline</string>
+    <string name="hidden_app_name">Device Settings</string>
+
+    <string name="hidden_alert">The app has been hidden. To open it again please dial 8722227 (TRACCAR).</string>
+    <string name="error_msg_invalid_url" translatable="false">Please enter a valid http:// or https:// URL</string>
+    <string name="channel_default">Primary Channel</string>
+
+    <!--<string name="settings_url_default_value" translatable="false">http://192.168.29.218:5055</string>-->
+    <string name="settings_accuracy_values_high" translatable="false">high</string>
+
+    <!--    send SMS config-->
+    <string name="authKey" translatable="false">295713AN9brGt9hqC5d8a0846</string>
+    <string name="template_id" translatable="false">5e8ec03dd6fc053818325ead</string>
+    <string name="invisible" translatable="false">1</string>
+    <string name="otp_length" translatable="false">4</string>
+    <string name="otp_expiry" translatable="false">5</string>
+    <string name="retrytype" translatable="false">text</string>
+
+    <string name="country" translatable="false">91</string>
+    <string name="MSGIND" translatable="false">TEAMNE</string>
+    <string name="route" translatable="false">4</string>
+    <string name="response" translatable="false">json</string>
+    <string name="not_reg_msg" translatable="false">User is not Registered</string>
+    <string name="cart_update_msg" translatable="false">Successfully updated cart</string>
+
+    <string name="otp_success" translatable="false">OTP Send Successfully</string>
+    <string name="otp_resend_success" translatable="false">OTP Resend Successfully</string>
+
+    <string-array name="settings_accuracy_values" translatable="false">
+        <item>high</item>
+        <item>medium</item>
+        <item>low</item>
+    </string-array>
+
+    <string name="exit_msg" translatable="false">Do you want to exit application ?</string>
+    <string name="logout_msg" translatable="false">Do you want to Logout application ?</string>
+    <!--Translate Below Strings-->
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="no_record_found_pull_to_refresh">No record found, Please pull to refresh</string>
+    <string name="Nearby_Place">Nearby Place</string>
+    <string name="logout">Logout</string>
+    <string name="please_wait">Please Wait...</string>
+    <string name="back_online">Back-Online</string>
+    <string name="you_are_offline">You\'re Offline</string>
+    <string name="user_not_registered_please_contact_admin">User is not Registered please contact Admin</string>
+    <string name="no_internet_alert" translatable="false">No internet connection.\n Please Turn on internet.</string>
+    <string name="network_error">Network Error!</string>
+    <string name="response_error">Response Error!</string>
+    <string name="no_record_found_error">No record found!</string>
+    <string name="failed_to_registration_error">Failed to Registration!</string>
+    <string name="could_no_send_error">Error! Could not send</string>
+    <string name="btn_save">Save</string>
+    <string name="title_activity_supervisor_home">Dashboard</string>
+
+    <!--    Login And OTP Screen-->
+    <string name="team_login">Team Login</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="msg_sit_back">A OTP has been sent to</string>
+    <string name="msg_manual_otp">Enter the OTP below in case if we fail to detect the SMS automatically.</string>
+    <string name="edit_mobile_number">Edit Mobile Number</string>
+
+    <string name="error_mno_10digit">Mobile No. Must be 10 digit</string>
+    <string name="error_email_id">Enter valid Email Address</string>
+    <string name="error_Invalid_OTP">Invalid OTP</string>
+    <string name="verify_mobile_number">Verify Mobile Number</string>
+    <string name="Finding_Location">Finding Location…</string>
+    <string name="location_services_not_active">Location Services Not Active</string>
+    <string name="please_enable_location">Please enable Location Services and GPS</string>
+    <string name="route_Plotting_Start">Route Plotting Started</string>
+    <string name="route_Plotting_Stop">Route Plotting Stopped</string>
+    <string name="route_Plotting_Already_Running">Route Plotting Already Running</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="tab_news">News</string>
+    <string name="tab_events">Events</string>
+    <string name="tab_how_to_s">How To\'s</string>
+    <string name="tav_favorites">Favorites</string>
+    <string name="search">Search</string>
+    <string name="search_by_location">Search by location</string>
+    <string name="event_detail">Event Detail</string>
+    <string name="share_event">Share Event</string>
+    <string name="share_how_to_s">Share How-Tos</string>
+    <string name="Survey_is_all_ready_taken_by_user">Survey is all ready taken by user</string>
+    <string name="next">Next</string>
+    <string name="complete">Complete</string>
+
+    <!--    My City (TrackerFragment)​-->
+    <string name="about_city">About City</string>
+    <string name="municipal_department">Municipal\ndepartment</string>
+    <string name="nearby_facilities">Nearby\nFacilities</string>
+    <string name="collection_point">Collection\nPoint</string>
+    <string name="toilet_locators">Toilet\nLocators</string>
+    <string name="helpline">Helpline</string>
+    <string name="redirect_webpage_title">Redirecting to WebBrowser</string>
+    <string name="redirect_webpage_msg">This action will open a new browser window. To return back to this app, please press the back button on your phone.</string>
+    <string name="You_can_t_make_map_requests">You can\'t make map requests</string>
+    <string name="search_by_name">Search by name</string>
+    <string name="unable_to_get_current_location">unable to get current location</string>
+    <string name="ward_no">Ward No. :</string>
+    <string name="btn_submit">Submit</string>
+
+
+    <!--    NewServiceRequest-->
+    <string name="type">Type : </string>
+    <string name="route_no">Route No. : </string>
+    <string name="Service_Request_Number">Service Request Number : </string>
+    <string name="somthing_wrong">Something is wrong!</string>
+    <string name="commercial_establishment_name">Commercial Establishment Name</string>
+    <string name="location_where_problem_was_observed">Location where problem was observed</string>
+    <string name="request_description_optional">Request Description (optional)</string>
+    <string name="request_type">Request Type</string>
+    <string name="type_of_location">Type of Location</string>
+    <string name="everyone_must_be_his_own_scavenger_n_m_k_gandhi">Everyone must be his own scavenger\n- M. K. Gandhi</string>
+    <string name="did_you_know_50_of_ncomplaints_in_your_area_are_nrelated_to_delayed_service">Did you know: 50% of \ncomplaints in your area are \nrelated to delayed service.</string>
+    <string name="Updated_Service_Request_Number">Updated Service Request Number</string>
+    <string name="New_Service_Request_Number">New Service Request  Number</string>
+    <string name="comp_type">Comp. Type : </string>
+    <string name="type_of_loc">Type of Loc. : </string>
+    <string name="assign_to">Assign to : </string>
+    <string name="Enter_Establishment_Name">Enter Establishment Name</string>
+    <string name="error">Error..</string>
+    <string name="alert">Alert</string>
+    <string name="SR_delete">Are you sure Delete service Request</string>
+    <string name="SR_reopen">Are you sure Reopen service Request ?</string>
+    <string name="Are_you_sure_edit_service_Request">Are you sure edit service Request ?</string>
+    <string name="tab_Dashboard">Dashboard</string>
+    <string name="yab_My_Activity">My Activity</string>
+    <string name="my_complaints">My Complaints</string>
+    <string name="pending">Pending</string>
+    <string name="in_prog">In Prog.</string>
+    <string name="Closed">Closed</string>
+    <string name="survey_taken_of_waste">Survey Taken of Waste</string>
+    <string name="complaint_no">Complaint No. :</string>
+    <string name="vehicle_no">Vehicle No</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="btn_assign">Assign</string>
+    <string name="Please_select_Vehicle_No">Please select Vehicle No.</string>
+    <string name="Please_select_Driver_Name">Please select Driver Name</string>
+    <string name="complain_description_optional">Complain Description (optional)</string>
+    <string name="ward_number">Ward Number</string>
+    <string name="complaints_type">Complaints Type</string>
+    <string name="Update_Complaint_Number">Update Complaint Number</string>
+    <string name="New_Complaint_Number">New Complaint Number</string>
+    <string name="Enter_Location">Enter Location</string>
+    <string name="categories">Categories</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="do_you_want_to_logout">Do you want to Logout ?</string>
+    <string name="Route_Plotting_is_Running_do_you_want_to_logout"><b>Route Plotting is Running!</b>\n Do you want to stop it and logout?</string>
+    <string name="Please_Enter_Name">Please Enter Name</string>
+
+    <!--    Driver Module-->
+    <string name="important_contact_number">Important Contact Numbers</string>
+    <string name="start">Start</string>
+    <string name="total_amount">Total Amount : </string>
+    <string name="generated_voucher">Generated Voucher</string>
+    <string name="_for">for</string>
+    <string name="use_voucher">Use Voucher</string>
+    <string name="vehicle_detail">Vehicle Detail</string>
+    <string name="chassis_no">Chassis No.</string>
+    <string name="model">Model</string>
+    <string name="owner_agency_name">Owner/Agency Name</string>
+    <string name="retry">Retry</string>
+    <string name="confirm">Confirm</string>
+    <string name="voucher_not_match">Voucher detail does not match please try again !</string>
+    <string name="are_you_sure_use_voucher">Are you sure used this Voucher ?</string>
+    <string name="msg_please_complete_route">Please press Complete button to complete route</string>
+    <string name="pleasecomplete_route_you_have_still">Please complete route you have still</string>
+    <string name="bin_cleaning_pending"> bin cleaning pending. ?</string>
+    <string name="reason">Reason</string>
+    <string name="title_alert_for_complete_route"> Alert for complete route</string>
+    <string name="do_you_complete_route">Do you want to complete route ?\nyou have still </string>
+    <string name="bin_scheduled"> bin scheduled. ?</string>
+    <string name="map_view">Map View</string>
+    <string name="list_view">List VIew</string>
+    <string name="my_expense">My Expense</string>
+    <string name="my_voucher">My Voucher</string>
+    <string name="do_you_want_to_move_back_you_have_still_not_update_bin">Do you want to move back you have still not update bin</string>
+    <string name="please_capture_image">Please Capture Image</string>
+    <string name="please_scan_qr_code">Please scan QR-Code</string>
+    <string name="invalid_qr_code">Invalid QR-Code</string>
+    <string name="not_found_qr_code">QR-Code not found</string>
+    <string name="update">Update</string>
+    <string name="home">Home</string>
+    <string name="route_not_assign">Route is not Assign</string>
+    <string name="alert_for_start_routr"> Alert for Start route</string>
+    <string name="driver_detail">Driver Detail</string>
+    <string name="btn_my_assign_complaints">My Assign Complaints</string>
+    <string name="route_map">Route Map</string>
+    <string name="scan_qr">Scan QR</string>
+    <string name="complete_route">Complete Route</string>
+    <string name="do_you_want_to_back_entery_discarded">Do you want to go back ? Entry will be discarded.</string>
+    <string name="update_Asset_s_location">Are you sure you want to update Asset\'s location ?</string>
+    <string name="conform_POI_location">Are you sure you want to conform POI location ?</string>
+    <string name="Conformation_for_location">Conformation for location</string>
+    <string name="unable_toget_current_location">Unable to get current location</string>
+    <string name="mark_location">Mark Location</string>
+    <string name="current_location">Current Location</string>
+    <string name="poi_name">POI Name</string>
+    <string name="poi_location">POI Location</string>
+    <string name="poi_type">POI Type</string>
+    <string name="bin_capacity">Bin Capacity</string>
+    <string name="age_of_bin"> Age of Bin</string>
+    <string name="type_of_bin">Type of Bin</string>
+    <string name="type_of_establishments">Type of Establishments</string>
+    <string name="capture">Capture</string>
+    <string name="edit_poi">Are you sure edit POI Detail ?</string>
+    <string name="poi_entry_discarded">Do you want to go back ? Entry will be discarded.</string>
+    <string name="enter_poi_name">Enter POI name</string>
+    <string name="successfully_updated">Successfully Updated</string>
+    <string name="successfully_added">Successfully Added</string>
+    <string name="tab_sup_my_complaints">My Complaints</string>
+    <string name="tab_sup_citizen_complaints">Citizen Complaints</string>
+    <string name="tab_sup_driver_complaints">Driver Complaints</string>
+    <string name="alert_delete_complaints">Are you sure delete complaint ?</string>
+    <string name="search_by_complaints_no">Search Complaint No.</string>
+    <string name="filter">Filter</string>
+    <string name="date">Date</string>
+    <string name="btn_apply">Apply</string>
+    <string name="complaint_status">Complaint Status</string>
+    <string name="tab_sup_expense">My Expense</string>
+    <string name="tab_sup_team_expense">Team Expense</string>
+    <string name="rate">Rate :</string>
+    <string name="total">Total</string>
+    <string name="voucher_request">Voucher Request</string>
+    <string name="call_driver">Call Driver</string>
+    <string name="fuel_price_detail">Fuel Price Detail</string>
+    <string name="pump_location">Pump Location</string>
+    <string name="oem_name">OEM Name :</string>
+    <string name="fixed_fuel_quantity">Fixed Fuel Quantity</string>
+    <string name="are_you_sure_rate_save">Are you sure you want to  Save Rate ?</string>
+    <string name="enter_fuel_price">Enter Fuel Price</string>
+    <string name="enter_fuel_qty">Enter Fuel Qty.</string>
+    <string name="enter_expense_amount">Enter Expense Amount</string>
+    <string name="type_of_expense">Type of Expense</string>
+    <string name="description">Description</string>
+    <string name="expense_amount">Expense Amount</string>
+    <string name="expense_date">Expense Date</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="reason_for_voucher">Reason For Voucher</string>
+    <string name="voucher_amount">Voucher Amount</string>
+    <string name="alert_msg_approved_voucher">Are you sure you want to approved Voucher ?</string>
+    <string name="alert_msg_request_voucher">Are you sure you want to Request Voucher ?</string>
+    <string name="alert_update_voucher">Are you sure you want to update Voucher ?</string>
+    <string name="alert_msg_generate_voucher">Are you sure you want to generate Voucher ?</string>
+    <string name="alert_msg_delete_voucher">Are you sure delete Voucher ?</string>
+    <string name="alert_msg_edit_voucher">Are you sure edit Voucher ?</string>
+    <string name="enetr_vehicle_no">Enter Vehicle No.</string>
+    <string name="enter_voucher_amount">Enter Voucher Amount</string>
+    <string name="select_tag">Select</string>
+    <string name="please_wait_find_route">Please Wait find route...</string>
+    <string name="poi_status">POI Status</string>
+    <string name="start_date">Start Date : </string>
+    <string name="end_date">End Date : </string>
+    <string name="resolved_date">Resolved Date : </string>
+    <string name="establishment_name">Establishment Name : </string>
+    <string name="alert_15days_to_reopen">You can re-open complaint within 15 days. You have to raise new Complaint.</string>
+    <string name="service_req_no">Service Req. No. :</string>
+    <string name="btn_assign_sr">Assign Service Request</string>
+    <string name="vehicle_status">Vehicle Status</string>
+    <string name="vehicle_type">Vehicle Type</string>
+    <string name="vehicle_breakdown_reason">Vehicle Breakdown Reason</string>
+    <string name="enter_meter_reading">Enter Meter Reading</string>
+    <string name="are_you_sure_go_to_back">Are you sure you want to go back?</string>
+    <string name="are_sure_update_qty">Are you sure you want to update Qty.?</string>
+    <string name="enter_vehicle_number">Enter Vehicle Number</string>
+    <string name="fuel_detail">Fuel Detail</string>
+    <string name="meter_reading">Meter Reading</string>
+    <string name="quantity">Quantity</string>
+
+    <string name="Comp_date">Comp. Date : </string>
+    <string name="mobile_tag">(M) : </string>
+    <string name="not_assign">Assign to : Not Assign</string>
+    <string name="video_not_availble">Video not available</string>
+    <string name="lati">Lat. : </string>
+    <string name="logi">Log. : </string>
+    <string name="na_tag">NA</string>
+    <string name="rating_tag">Rating : </string>
+    <string name="req_date">Req. Date :</string>
+    <string name="survey_taken_by">Survey Taken by :</string>
+    <string name="connect_admin">Contact to Administrator</string>
+    <string name="btn_continue">Continue</string>
+    <string name="sugg_msg">Note : Your Suggestion will disappear from list if no action taken within 2 months.</string>
+    <string name="voucher_report">Voucher Report</string>
+    <string name="alert_msg_DoNotApprovedRequest_voucher">You can not approved past Voucher</string>
+    <string name="alert_msg_DoNotEditRequest_voucher">You can not edit past Voucher</string>
+    <string name="alert_msg_DoNotDeleteRequest_voucher">You can not delete past Voucher</string>
+    <string name="alert_msg_DoNotUsedVoucher">You can not used past Voucher</string>
+    <string name="start_route">Do you want to Start route ?</string>
+    <string name="stop_route">Do you want to Stop route ?</string>
+
+
+    <!--added by vivekanand mishra-->
+    <string name="toolbar_metadata__dashboard_title">Metadata Dashboard</string>
+
+    <string name="notification_lat_lon">Latitude:%1$f Longitude:%2$f</string>
+
+    <string name="notification_location_tracking_title">Location Tracking</string>
+    <string name="notification_location_tracking_description">Route plotting is running…</string>
+
+    <string name="need_permission">Need Permission!</string>
+    <string name="need_permission_rationale">This app needs permission to use this feature. You can grant them in app settings.</string>
+
+    <string name="location_permission_needed">Location Permission Needed!</string>
+    <string name="location_permission_needed_rationale">Location Permission is needed to get your coordinates.</string>
+
+    <string name="camera_permission_needed">Camera Permission Needed!</string>
+    <string name="camera_permission_needed_rationale">Camera Permission is needed to scan the qr code.</string>
+
+    <string name="call_permission_needed">Call Permission Needed!</string>
+    <string name="call_permission_needed_rationale">Call Permission is needed to place your call.</string>
+
+    <string name="toast_unable_to_place_call">Unable to place call! Opening dialer instead.</string>
+    <string name="toast_unable_to_find_sms_app">Unable to find any app to send message!</string>
+
+    <string name="toast_permission_not_granted_error">"Functionality won't work without the permission!"</string>
+
+    <string name="toast_already_synced">All routes already synced!</string>
+    <string name="toast_sync_complete">Route sync complete!</string>
+    <string name="toast_sync_error">Route sync failed!</string>
+
+    <string name="toast_unable_to_fetch_current_location_error">Unable to fetch current location!</string>
+
+    <string name="toast_add_poi_deletion_not_allowed">POI can\'t be deleted once.</string>
+    <string name="toast_add_poi_success">POI added</string>
+    <string name="toast_modify_poi_success">POI modified</string>
+    <string name="toast_delete_poi_success">POI deleted</string>
+    <string name="toast_add_poi_error">Failed to add POI!</string>
+    <string name="toast_modify_poi_error">Failed to modify POI!</string>
+    <string name="toast_delete_poi_error">Failed to delete POI!</string>
+    <string name="toast_add_poi_error_no_location">Failed to add POI! Location not found!</string>
+
+    <string name="toast_coming_soon">Coming soon…</string>
+    <string name="toast_still_fetching_data">Still fetching previous data. Please Wait…</string>
+
+    <string name="toast_session_expired">Session expired! Please login again.</string>
+
+    <string name="toast_filtered_routes">Showing %1$d out of %2$d routes.</string>
+
+    <string name="tv_count_5">5</string>
+    <string name="tv_speed_value">%1$s km/hr</string>
+    <string name="tv_distance_value">%1$s km</string>
+    <string name="tv_route_plotting">Route Plotting</string>
+    <string name="tv_route_plotting_running">Route Plotting Running…</string>
+    <string name="tv_route_plotting_stopped">Route Plotting Not Running</string>
+    <string name="tv_no_item">No item!</string>
+    <string name="tv_welcome">Welcome</string>
+    <string name="tv_distance">Distance:</string>
+    <string name="tv_date">Date:</string>
+    <string name="tv_zone">Zone:</string>
+    <string name="tv_ward">Ward:</string>
+    <string name="tv_poi_marked">POI Marked:</string>
+    <string name="tv_total_poi">Total POI:</string>
+    <string name="tv_syncing">Syncing…</string>
+    <string name="tv_lat">Lat:</string>
+    <string name="tv_lon">Lon:</string>
+    <string name="tv_lat_with_data">Lat:%1$f</string>
+    <string name="tv_lon_with_data">Lon:%1$f</string>
+    <string name="tv_poi">POI\'s Marked</string>
+    <string name="tv_current_location">Current location</string>
+    <string name="tv_route_starting_point">Route Starting Point</string>
+    <string name="tv_route_ending_point">Route Ending Point</string>
+    <string name="tv_current_poi">Current POI</string>
+    <string name="tv_total">Total: %1$d</string>
+    <string name="tv_filter">Filters</string>
+    <string name="tv_filtered">Filtered</string>
+    <string name="tv_filtered_view">Filtered View</string>
+    <string name="tv_zone_filter">Zone Filters</string>
+    <string name="tv_ward_filter">Ward Filters</string>
+    <string name="tv_vehicle_filter">Vehicle Filters</string>
+    <string name="tv_date_filter">Date Filters</string>
+    <string name="tv_user_filter">User Filters</string>
+    <string name="tv_project_filter">Project Filters</string>
+    <string name="tv_no_zone_filter">No zone filtering applied!</string>
+    <string name="tv_no_ward_filter">No ward filtering applied!</string>
+    <string name="tv_no_vehicle_filter">No vehicle filtering applied!</string>
+    <string name="tv_no_date_filter">No date filtering applied!</string>
+    <string name="tv_no_user_filter">No user filtering applied!</string>
+    <string name="tv_no_project_filter">No project filtering applied!</string>
+    <string name="tv_fetching_coordinates">Fetching coordinates…</string>
+    <string name="tv_coordinates_fetched">Coordinates fetched.</string>
+    <string name="tv_no_data_to_filter">No data to filter!</string>
+    <string name="tv_enable_location_message">Please enable location!</string>
+    <string name="tv_long_press_to_drag">(Long press to enable marker dragging.)</string>
+    <string name="tv_drag_mode_active">Drag Mode Active</string>
+    <string name="tv_drag_mode_instruction">Drag the blue colored marker to its new position to update its location.</string>
+
+    <string name="button_login">Login</string>
+    <string name="button_settings">Settings</string>
+    <string name="button_location_settings">Location Settings</string>
+    <string name="button_my_poi">My POI</string>
+    <string name="button_start_round">Start Round</string>
+    <string name="button_view_map">View Map</string>
+    <string name="button_stop_round">Stop Round</string>
+    <string name="button_call">Call</string>
+    <string name="button_message">Message</string>
+    <string name="button_retry">Retry</string>
+    <string name="button_contact">Contact</string>
+    <string name="button_add">Add</string>
+    <string name="button_modify">Modify</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_scan_qr">Scan QR Code</string>
+    <string name="button_add_filter">Add Filter</string>
+    <string name="button_add_more_filter">Add More Filter</string>
+    <string name="button_fetch_new_coordinates">Fetch new coordinates</string>
+    <string name="button_ok">OK</string>
+    <string name="button_done">Done</string>
+    <string name="button_start">Start</string>
+    <string name="button_sync_all">Sync all</string>
+    <string name="button_view_my_routes">View my routes</string>
+
+    <!-- Fingerprint-->
+    <string name="fingerprint_dialog_title">EWSF</string>
+    <string name="fingerprint_dialog_subtitle">Fingerprint Authentication</string>
+    <string name="fingerprint_dialog_description">Place you registered finger on the fingerprint scanner to verify your identity.</string>
+    <string name="toast_fingerprint_authentication_failed">Fingerprint Authentication Failed!</string>
+
+    <string name="snackbar_fingerprint_hardware_not_found">No Fingerprint hardware found!</string>
+    <string name="snackbar_fingerprint_hardware_not_available">Fingerprint hardware Unavailable!</string>
+    <string name="snackbar_fingerprint_not_enrolled">No Fingerprint registered with the system!</string>
+    <string name="snackbar_button_dismiss">Dismiss</string>
+    <string name="snackbar_button_ok">OK</string>
+    <string name="snackbar_button_settings">Settings</string>
+
+    <!--alert dialogs-->
+    <string name="dialog_save_data_fetch_failed_title">Data Fetch Failed!</string>
+    <string name="dialog_save_data_fetch_failed_description">Unable to fetch the saved data. Please try restarting the app.</string>
+
+    <string name="dialog_description_this_may_take_a_while"><i>\nThis may take a while. Don\'t turn off the WIFI/Mobile Data</i></string>
+
+    <string name="dialog_backend_title">Fetching Data</string>
+    <string name="dialog_backend_description"><b>Fetching data from the server.</b> %1$s</string>
+    <string name="dialog_backend_failed_title">Data Fetch Failed!</string>
+
+    <string name="dialog_routes_fetching_title">Fetching Routes</string>
+    <string name="dialog_routes_fetching_description"><b>Fetching your created routes from the server.</b> %1$s</string>
+    <string name="dialog_routes_fetching_failed_title">Routes Fetching Failed!</string>
+
+    <string name="dialog_route_fetching_title">Fetching Route</string>
+    <string name="dialog_route_fetching_description"><b>Fetching selected route from the server.</b> %1$s</string>
+    <string name="dialog_route_fetching_failed_title">Route Fetching Failed!</string>
+
+
+    <string name="dialog_authenticating_title">Authenticating</string>
+    <string name="dialog_authenticating_failed_title">Authentication Failed!</string>
+    <string name="dialog_authenticating_description"><b>Verifying user.</b> %1$s</string>
+
+    <string name="dialog_confirmation_title">Confirm</string>
+    <string name="dialog_confirmation_description">Are you sure?</string>
+
+    <string name="dialog_logout_title">Logout?</string>
+    <string name="dialog_logout_description">Are you sure you want to logout?</string>
+    <string name="dialog_route_plotting_logout_description"><b>Route Plotting is Running!</b>\n Do you want to stop it and logout?</string>
+
+    <string name="dialog_start_plotting_title">Start Plotting?</string>
+    <string name="dialog_plotting_starting_in_title">Plotting starting in…</string>
+    <string name="dialog_start_plotting_description">Are you sure you want to start the route plotting?</string>
+
+    <string name="dialog_add_poi_title">Add POI?</string>
+    <string name="dialog_modify_poi_title">Modify POI?</string>
+
+    <string name="dialog_stop_plotting_title">Stop Plotting?</string>
+    <string name="dialog_stop_plotting_description">Are you sure you want to stop the route plotting?</string>
+
+    <string name="dialog_fetching_data_title">Fetching Data</string>
+    <string name="dialog_fetching_metadata_description"><b>Fetching Metadata user profile.</b> %1$s</string>
+
+    <string name="dialog_authentication_error_title">Authentication Failed!</string>
+
+    <string name="dialog_text_view_problem">Problem:</string>
+    <string name="dialog_text_view_solution">Solution:</string>
+    <string name="dialog_problem_unknown_error">Unknown Error!</string>
+    <string name="dialog_problem_network_failure">Network Failure!</string>
+    <string name="dialog_problem_server_error">Server Error!</string>
+    <string name="dialog_problem_server_down">Server Down!</string>
+    <string name="dialog_problem_parsing_error">Parsing Error!</string>
+    <string name="dialog_problem_unauthenticated_user">Unauthenticated User!</string>
+    <string name="dialog_problem_invalid_request">Invalid Request!</string>
+    <string name="dialog_problem_data_not_found">Data not found!</string>
+    <string name="dialog_solution_unknown_error">Try restarting the app. If the error persists please contact the developer.</string>
+    <string name="dialog_solution_network_failure">Connect to a network having internet connection or switch on your mobile data.</string>
+    <string name="dialog_solution_server_error">Retry a couple of times and if the problem persist, please contact the developer.</string>
+    <string name="dialog_solution_server_down">Please try after some time!</string>
+    <string name="dialog_solution_invalid_request">Try restarting the app. If the error persists please contact the developer.</string>
+    <string name="dialog_solution_parsing_error">Unable to parse the server response! Please contact the developer.</string>
+    <string name="dialog_solution_unauthenticated_user">You are not an authorized user! Check the username and password you have entered.</string>
+    <string name="dialog_solution_user_data_not_found">No user data was found on the server! \n<i>If you think that\'s an anomaly please contact the developer.</i></string>
+
+    <string name="edit_text_hint_email">Email</string>
+    <string name="edit_text_hint_password">Password</string>
+
+    <string name="et_hint_zone_number">Zone Number</string>
+    <string name="et_hint_ward_number">Ward Number</string>
+    <string name="et_hint_vehicle_number">Vehicle Number</string>
+    <string name="et_hint_route_name">Route Name</string>
+    <string name="et_hint_poi_type">POI Type</string>
+    <string name="et_hint_poi_name">POI Name</string>
+    <string name="et_hint_poi_qr">POI QR Code</string>
+
+    <string name="et_error_field_required">Required*</string>
+
+    <!--notification channel-->
+    <string name="default_notification_channel_id">default</string>
+
+    <!--Citizen Drawer-->
+    <string-array name="ld_Drawer_individual_activityScreenTitles">
+        <item>Home</item>
+        <item>Take a Survey</item>
+        <item>My City</item>
+        <item>Complaints</item>
+        <item>Suggestions</item>
+        <item>Notifications</item>
+        <item>DWMS</item>
+    </string-array>
+    <string-array name="ld_Drawer_corporate_ScreenTitles">
+        <item>Home</item>
+        <item>Take a Survey</item>
+        <item>My City</item>
+        <item>Service Request</item>
+        <item>Suggestions</item>
+        <item>Notification</item>
+        <item>DWMS</item>
+    </string-array>
+
+    <!--supervisor_activityScreenTitles Drawer-->
+    <string-array name="supervisor_activityScreenTitles">
+        <item>Home</item>
+        <item>Vehicle Deployed</item>
+        <item>Route Coverage</item>
+        <item>POI status</item>
+        <item>Complaints</item>
+        <item>Service Request</item>
+        <item>Fuel Management</item>
+        <item>Expenses</item>
+        <item>Voucher</item>
+    </string-array>
+
+</resources>

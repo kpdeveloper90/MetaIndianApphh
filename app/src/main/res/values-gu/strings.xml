@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="send_otp">OTP મોકલો</string>
+    <string name="mobile_number">મોબાઇલ નંબર</string>
+    <string name="email">ઇમેઇલ</string>
+    <string name="individual">વ્યક્તિગત</string>
+    <string name="corporate">કોર્પોરેટ</string>
+    <string name="error_mno_10digit">મોબાઇલ નંબર 10 અંક હોવો આવશ્યક છે</string>
+    <string name="error_email_id">માન્ય ઇમેઇલ સરનામું દાખલ કરો</string>
+    <string name="Nearby_Place">Nearby Place</string>
+
+    <string name="please_wait">મહેરબાની કરી રાહ જુવો...</string>
+    <string name="no_record_found_pull_to_refresh">કોઈ રેકોર્ડ મળ્યો નથી, કૃપા કરીને તાજું કરવા માટે ખેંચો</string>
+</resources>

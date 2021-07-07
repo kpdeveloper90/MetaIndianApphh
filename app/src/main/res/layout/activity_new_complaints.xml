@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/conl_login"
+    android:background="@color/app_bg"
+    android:orientation="vertical"
+    tools:context=".activity.citizen.NewComplaints">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/left_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="16dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/right_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="16dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/top_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="10dp" />
+
+                <ImageView
+                    android:id="@+id/img_comp_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/app_bg_card"
+                    android:src="@drawable/default_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_capturePic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_photo_camera_icon"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_com_location"
+                    app:layout_constraintEnd_toEndOf="@+id/img_comp_image"
+                    app:layout_constraintHorizontal_bias="0.955"
+                    app:layout_constraintStart_toStartOf="@+id/img_comp_image"
+                    app:layout_constraintTop_toTopOf="@+id/img_comp_image"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/tv_com_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/location_where_problem_was_observed"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/img_comp_image" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_com_location"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edt_new_com_height"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="textPersonName"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="40dp"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_com_location" />
+
+                <ImageView
+                    android:id="@+id/img_getCurrentLoc"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/img_oprion_btn"
+                    android:clickable="true"
+                    android:src="@drawable/ic_gps_fixed_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/edt_com_location"
+                    app:layout_constraintEnd_toEndOf="@+id/edt_com_location"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/edt_com_location"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_com_location" />
+
+                <TextView
+                    android:id="@+id/tv_com_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/complain_description_optional"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/img_getCurrentLoc" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_com_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_edittext"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:imeOptions="actionDone"
+                    android:text=""
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/tv_com_desc"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_com_desc" />
+
+                <RelativeLayout
+                    android:id="@+id/tv_tag_enterMoreDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_com_desc">
+
+
+                    <TextView
+                        android:id="@+id/tv_wardNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginEnd="8dp"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center_vertical"
+                        android:layout_alignBottom="@+id/ll_com_wardNumber"
+                        android:layout_alignTop="@+id/ll_com_wardNumber"
+                        android:text="@string/ward_number" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_com_wardNumber"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_toEndOf="@+id/tv_wardNumber"
+                        android:background="@drawable/bg_edittext">
+
+                        <Spinner
+                            android:id="@+id/sp_com_wardNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog" />
+                    </LinearLayout>
+<ImageView
+    android:id="@+id/img_icon_word_detail"
+    android:layout_width="30dp"
+    android:layout_centerVertical="true"
+    android:layout_toEndOf="@+id/ll_com_wardNumber"
+    android:background="@drawable/img_oprion_btn"
+    android:src="@drawable/ic_error_black_24dp"
+    android:layout_height="match_parent" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tag_enterMoreDetail">
+
+                    <LinearLayout
+                        android:id="@+id/cl_enter_moreDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_comp_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/complaints_type" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_com_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_comp_type"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/bg_edittext">
+
+                                <Spinner
+                                    android:id="@+id/sp_com_type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:spinnerMode="dialog" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_type_of_loc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:text="@string/type_of_location" />
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_typeof_loc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_type_of_loc"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/bg_edittext">
+
+                                <Spinner
+                                    android:id="@+id/sp_typeof_loc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:spinnerMode="dialog" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_bottom_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@id/cl_enter_moreDetail">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/gandhi_ji"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_tag_quate_line"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/everyone_must_be_his_own_scavenger_n_m_k_gandhi"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+
+                        <ImageView
+                            android:id="@+id/img_icon_ligt_blub"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="2dp"
+                            android:src="@drawable/ic_light_bulb"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_tag_quate_line2"
+                            app:layout_constraintEnd_toStartOf="@+id/tv_tag_quate_line2"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintTop_toTopOf="@+id/tv_tag_quate_line2"
+                            app:layout_constraintVertical_bias="0.100000024" />
+
+                        <TextView
+                            android:id="@+id/tv_tag_quate_line2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/did_you_know_50_of_ncomplaints_in_your_area_are_nrelated_to_delayed_service"
+                            android:textColor="@color/blub_text_new_com"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio=""
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.28"
+                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_tag_quate_line"
+                            app:layout_constraintVertical_bias="0.49" />
+
+                        <ImageView
+                            android:id="@+id/im_btn_submit"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/img_oprion_btn"
+                            android:clickable="true"
+                            android:src="@drawable/ic_submit"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_tag_quate_line2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.63"
+                            app:layout_constraintStart_toEndOf="@+id/tv_tag_quate_line2"
+                            app:layout_constraintTop_toTopOf="@+id/tv_tag_quate_line2"
+                            app:layout_constraintVertical_bias="0.63" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

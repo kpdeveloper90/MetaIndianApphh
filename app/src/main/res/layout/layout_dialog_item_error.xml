@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/DialogTitle"
+        android:id="@+id/tvTitle"
+        android:textColor="@color/danger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/dialog_authentication_error_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/DialogSubTitle"
+        android:id="@+id/materialTextView9"
+        android:text="@string/dialog_text_view_problem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/DialogDescriptionUploadFailure"
+        android:id="@+id/tvProblem"
+        app:layout_constraintBottom_toBottomOf="@+id/materialTextView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/materialTextView9"
+        app:layout_constraintTop_toTopOf="@+id/materialTextView9"
+        tools:text="@string/dialog_problem_network_failure" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/DialogSubTitle"
+        android:id="@+id/materialTextView10"
+        android:text="@string/dialog_text_view_solution"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView9" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/DialogDescriptionUploadFailure"
+        android:id="@+id/tvSolution"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/materialTextView10"
+        app:layout_constraintTop_toTopOf="@+id/materialTextView10"
+        tools:text="@string/dialog_solution_network_failure" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbCancel"
+        style="@style/DialogDangerButton"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_width="wrap_content"
+        android:text="@string/button_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/mbRetry"
+        app:layout_constraintEnd_toStartOf="@+id/mbRetry"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mbRetry" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/DialogSuccessButton"
+        android:id="@+id/mbRetry"
+        android:text="@string/button_retry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mbCancel"
+        app:layout_constraintTop_toBottomOf="@+id/tvSolution" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

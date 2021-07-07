@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".activity.citizen.MyProfile">
+
+    <include
+        android:id="@+id/include5"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_img_icon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/app_bg_gradiant"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include5">
+
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/img_profile_pic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_user_1"
+            app:civ_border_color="@color/grey_400"
+            app:civ_border_width="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/img_profile_capturePic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/img_oprion_btn"
+            android:src="@drawable/ic_photo_camera_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.61"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.92" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/img_name_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_outline_person_24px"
+        android:tint="@color/grey_600"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name_pro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_name_pro" />
+
+    <TextView
+        android:id="@+id/tv_name_pro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Name"
+        android:textColor="@color/grey_600"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_name_icon"
+        app:layout_constraintTop_toBottomOf="@+id/ll_img_icon" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_pro_name"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_new_com_height"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edittext"
+        android:inputType="textPersonName"
+        android:paddingStart="5dp"
+        android:paddingEnd="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name_pro"
+        app:layout_constraintStart_toStartOf="@+id/img_name_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_pro" />
+
+
+    <ImageView
+        android:id="@+id/img_email_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_outline_email_24px"
+        android:tint="@color/grey_600"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_profile_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_profile_email" />
+
+    <TextView
+        android:id="@+id/tv_profile_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Email"
+        android:textColor="@color/grey_600"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_email_icon"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pro_name" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_pro_email"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_new_com_height"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edittext"
+        android:inputType="textEmailAddress"
+        android:paddingStart="5dp"
+        android:paddingEnd="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_profile_email"
+        app:layout_constraintStart_toStartOf="@+id/img_email_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_email" />
+
+    <LinearLayout
+        android:id="@+id/cl_enter_moreDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pro_email">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_comp_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Ward Location" />
+
+            <LinearLayout
+                android:id="@+id/ll_com_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_comp_type"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_edittext">
+
+                <Spinner
+                    android:id="@+id/sp_com_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_type_of_loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Ward Number" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_wardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_type_of_loc"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_edittext">
+
+                <Spinner
+                    android:id="@+id/sp_wardNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/AppTheme.GreenUnelevatedButton"
+        android:id="@+id/btn_save_profile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/btn_save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_enter_moreDetail"
+        app:layout_constraintVertical_bias="0.90999997" />
+</androidx.constraintlayout.widget.ConstraintLayout>

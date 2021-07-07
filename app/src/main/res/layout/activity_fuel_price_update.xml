@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg_gradiant"
+    android:orientation="vertical"
+    tools:context=".activity.supervisor.FuelPriceUpdate">
+
+    <include
+        android:id="@+id/include7"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_Fuel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/fab_margin"
+
+        app:cardBackgroundColor="@color/app_bg"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_fuelDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/img_hader"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/worker_filling_up_fuel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1.6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_hader">
+
+
+                <TextView
+                    android:id="@+id/tv_FuelPriceTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/fuel_price_detail"
+                    android:textColor="@color/blue_900"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_fpLocTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_FuelPriceTag"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/tv_fup_Loc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pump_location" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_com_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_fup_Loc"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_edittext">
+
+                        <Spinner
+                            android:id="@+id/sp_fup_Loc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:spinnerMode="dialog" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_tag_fuel_oem_nm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_fpLocTag"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/oem_name" />
+
+                <TextView
+                    android:id="@+id/tv_fuel_oem_nm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_tag_fuel_oem_nm"
+            android:layout_toEndOf="@+id/tv_tag_fuel_oem_nm"
+                    android:text="-"
+                    android:maxLines="1"
+                    android:textColor="@color/rv_hader"
+                    android:paddingStart="10dp" />
+                <TextView
+                    android:id="@+id/tv_fuel_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_fuel_oem_nm"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/rate" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_fuel_price"
+                    android:layout_width="155dp"
+                    android:layout_height="@dimen/edt_new_com_height"
+                    android:layout_below="@+id/tv_fuel_price"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="8dp"
+                    android:imeOptions="actionDone"
+                    android:background="@drawable/bg_edittext"
+                    android:drawableEnd="@drawable/ic_rupee_indian"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/grey_600"
+                    android:hint="0.0"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="10dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_fixed_fuel_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/edt_new_com_height"
+                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                    android:layout_below="@+id/edt_fuel_price"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/fixed_fuel_quantity"
+                  />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_fuel_qty"
+                    android:layout_width="155dp"
+                    android:layout_height="@dimen/edt_new_com_height"
+                    android:layout_below="@+id/tv_fuel_price"
+                    android:layout_alignTop="@+id/cb_fixed_fuel_qty"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:imeOptions="actionDone"
+                    android:layout_toEndOf="@+id/cb_fixed_fuel_qty"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="0.0"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="10dp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cb_fixed_fuel_qty"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="2">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/btn_height"
+                        style="@style/AppTheme.BlueUnelevatedButton"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        app:backgroundTint="@color/my_complain"
+                        app:cornerRadius="15dp"
+                        android:textColor="@color/white"
+                        android:text="@string/btn_cancel"
+                        android:textAllCaps="false"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_save"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/btn_height"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        style="@style/AppTheme.BlueUnelevatedButton"
+                        app:cornerRadius="15dp"
+                        android:text="@string/btn_continue"
+                        android:textAllCaps="false"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

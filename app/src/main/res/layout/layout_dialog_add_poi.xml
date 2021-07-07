@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cdRoot"
+    style="@style/Card">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitle"
+                style="@style/DialogTitle"
+                android:text="@string/dialog_add_poi_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout
+                android:id="@+id/ilPoiType"
+                style="@style/CardInputLayoutDropDown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                app:required="true"
+                app:validationCheck="always">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etPoiType"
+                    style="@style/CardEditText"
+                    android:focusable="false"
+                    android:hint="@string/et_hint_poi_type" />
+
+            </com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout>
+
+            <com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout
+                android:id="@+id/ilPoiName"
+                style="@style/CardInputLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ilPoiType"
+                app:required="true"
+                app:validationCheck="always">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPoiName"
+                    style="@style/CardEditText"
+                    android:hint="@string/et_hint_poi_name"
+                    android:imeOptions="actionDone" />
+            </com.mvivekanandji.validatingtextinputlayout.ValidatingTextInputLayout>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cpLat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/tv_lat_with_data"
+                android:textColor="@color/colorPrimary"
+                app:chipBackgroundColor="@color/white"
+                app:chipStrokeColor="@color/colorPrimary"
+                app:chipStrokeWidth="2dp"
+                app:layout_constraintEnd_toStartOf="@+id/cpLon"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ilPoiName" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cpLon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/tv_lon_with_data"
+                android:textColor="@color/colorPrimary"
+                app:chipBackgroundColor="@color/white"
+                app:chipStrokeColor="@color/colorPrimary"
+                app:chipStrokeWidth="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cpLat"
+                app:layout_constraintTop_toBottomOf="@+id/ilPoiName" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btFetchCoordinates"
+                style="@style/DialogSuccessButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_fetch_new_coordinates"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cpLon" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvFetchingCoordinates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_fetching_coordinates"
+                android:textAlignment="center"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btFetchCoordinates" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cdMap"
+                style="@style/Card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFetchingCoordinates">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivLoading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="88dp"
+                        android:layout_marginBottom="88dp"
+                        android:tint="@color/colorPrimary"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/map"
+                        app:layout_constraintStart_toStartOf="@+id/map"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_sync_24" />
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:uiCompass="true"
+                        app:uiMapToolbar="false"
+                        app:uiRotateGestures="true"
+                        app:uiScrollGestures="true"
+                        app:uiTiltGestures="true"
+                        app:uiZoomControls="true"
+                        app:uiZoomGestures="true" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilPoiQr"
+                style="@style/CardInputLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cdMap"
+                app:endIconMode="none"
+                app:boxStrokeColor="@color/grey_600"
+                app:hintTextColor="@color/grey_600"
+                android:textColorHint="@color/grey_600"
+                app:required="false"
+                android:enabled="false"
+                app:validationCheck="always">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPoiQr"
+                    style="@style/CardEditText"
+                    android:enabled="false"
+                    android:hint="@string/et_hint_poi_qr"
+                    android:imeOptions="actionDone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btScanQr"
+                style="@style/OutlineSuccessButton"
+                android:layout_marginTop="8dp"
+                android:text="@string/button_scan_qr"
+                app:icon="@drawable/ic_baseline_qr_code_scanner_24"
+                app:iconTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ilPoiQr" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdScanner"
+                style="@style/Card"
+                app:strokeWidth="8dp"
+                android:visibility="gone"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btScanQr">
+
+                <com.budiyev.android.codescanner.CodeScannerView
+                    android:id="@+id/qrScanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:autoFocusButtonColor="@color/white"
+                    app:autoFocusButtonVisible="true"
+                    app:flashButtonColor="@color/white"
+                    app:flashButtonVisible="true"
+                    app:frameAspectRatioHeight="1"
+                    app:frameAspectRatioWidth="1.5"
+                    app:frameColor="@color/white"
+                    app:frameCornersRadius="20dp"
+                    app:frameCornersSize="50dp"
+                    app:frameSize="0.80"
+                    app:frameThickness="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btScanQr"
+                    app:maskColor="#77000000" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btYes"
+                style="@style/DialogSuccessButton"
+                android:enabled="false"
+                android:text="@string/button_add"
+                app:layout_constraintBottom_toBottomOf="@+id/btCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btCancel"
+                app:layout_constraintTop_toTopOf="@+id/btCancel" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btCancel"
+                style="@style/DialogDangerButton"
+                android:layout_marginBottom="8dp"
+                android:text="@string/button_cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btYes"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cdScanner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</com.google.android.material.card.MaterialCardView>

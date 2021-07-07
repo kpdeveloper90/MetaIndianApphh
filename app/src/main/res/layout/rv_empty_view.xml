@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rv_empty_bg"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:src="@drawable/empty_view_image" />
+
+    <TextView
+        android:id="@+id/img_empty_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal"
+        android:text="Oops!"
+        android:visibility="gone"
+        android:textColor="@color/rv_hader"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/img_empty_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal"
+        android:text="No record found, Please pull to refresh"
+        android:textColor="@color/grey_600"
+        android:textSize="14sp" />
+
+</LinearLayout>

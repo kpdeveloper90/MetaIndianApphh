@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawer_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_drawer_Fuel_Management"
+            android:icon="@drawable/ic_gasoline_pump"
+            android:title="Fuel Management" />
+        <item
+            android:id="@+id/nav_drawer_VehicleDeployed"
+            android:icon="@drawable/ic_cargo_truck"
+            android:title="Vehicle Deployed" />
+
+        <item
+            android:id="@+id/nav_drawer_RouteCoverage"
+            android:icon="@drawable/ic_route"
+            android:title="Route Coverage" />
+        <item
+            android:id="@+id/nav_drawer_BinCleared"
+            android:icon="@drawable/ic_delete_black_24dp"
+            android:title="POI status" />
+        <item
+            android:id="@+id/nav_drawer_Complaints"
+            android:icon="@drawable/ic_complain"
+            android:title="Complaints &amp; Re-Addressals" />
+        <item
+            android:id="@+id/nav_drawer_voucherDetail"
+            android:icon="@drawable/ic_voucher"
+            android:title="Voucher Detail" />
+        <item
+            android:id="@+id/nav_drawer_Expense"
+            android:icon="@drawable/ic_expance"
+            android:title="Expense Detail" />
+        <item
+            android:id="@+id/nav_drawer_logout"
+            android:icon="@drawable/ic_exit"
+            android:title="Logout" />
+    </group>
+
+    <!--<item android:title="Fuel Management">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_Fuel_Management"-->
+    <!--android:icon="@drawable/ic_menu_share"-->
+    <!--android:title="Fuel Management" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_send"-->
+    <!--android:icon="@drawable/ic_menu_send"-->
+    <!--android:title="Report" />-->
+    <!--</menu>-->
+    <!--</item>-->
+
+
+</menu>
